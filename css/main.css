@@ -61,7 +61,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   header * {
+     display:inline;
+   }
+    header #menuToggle {
+      float:left;
+    }
+    header h1 {
 
+    }
+
+     #menuToggle:before {
+       content:'\2630';
+       font-size:2em;
+     }
 
 
 
