@@ -60,11 +60,12 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   header { display:block; height:4em;  }
+   header { display:block; height:4em; background-color:#0099CC; }
    header * {
      display:inline-block;
      vertical-align:middle;
      margin-left:1em;
+     color:#EEE;
    }
     header h1 {
       margin:0;
@@ -89,8 +90,11 @@ textarea {
       width: auto;
       max-width: 100%;
     }
-
-
+    header ul {
+      float:right;
+      margin-right:2em;
+      vertical-align:middle;
+    }
 
 
 
