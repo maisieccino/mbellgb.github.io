@@ -60,21 +60,35 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+   header { display:block; height:4em;  }
    header * {
-     display:inline;
+     display:inline-block;
+     vertical-align:middle;
+     margin-left:1em;
    }
-    header #menuToggle {
-      float:left;
-    }
     header h1 {
-
+      margin:0;
     }
 
      #menuToggle:before {
        content:'\2630';
        font-size:2em;
      }
+    #headerIcon {
+     display:inline-block;
+     height:100%;
+     }
+    #headerIcon img {
+      zoom:2;
+      display: block;
+      margin: auto;
+
+      height: auto;
+      max-height: 100%;
+
+      width: auto;
+      max-width: 100%;
+    }
 
 
 
