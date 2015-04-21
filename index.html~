@@ -26,9 +26,9 @@
           <h1>Matthew Bell</h1>
           <ul>
             <a href="index.html"><li>Home</li></a>
-            <li>About</li>
-            <li>Blog</li>
-            <li>GitHub</li>
+            <a href="about.html"><li>About</li></a>
+	    <a href="http://blog.mbell.ml"><li>Blog</li>
+	    <a href="https://github.com/logicnotlogical"><li>GitHub</li>
           </ul>
         </header>
 
