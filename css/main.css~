@@ -99,7 +99,7 @@ textarea {
     article {
 	width:75%;
 	background-color:#EEE;
-	margin: 1em auto;
+	margin: 0 auto;
 	padding:5px;
     }    
 
