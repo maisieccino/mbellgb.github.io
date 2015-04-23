@@ -85,19 +85,35 @@ textarea {
        }
 
        header ul {
-       	 display:none;
-       }
-	header ul a {
+       	 display:inline-block;
+	 opacity:0;
+         color:#EEE;
+	 transition:visibility 0s linear 0.5s, opacity 0.5s linear;
+	}
+       header ul a {
 		float:none;
 		display:block;
 	}
        .menuClicked {
-		display:inline-block;
+		visibility:visible;
+		opacity:1;
+		transition:visibility 0s linear 0.5s, opacity 0.5s linear;
 		float:none;
 		z-index:10;
 		background-color:#46C2EB;
 		position:absolute;
-		left:0; top:40px;
+		left:0; top:50px;
+		padding:5px;
+       }
+       header ul:before {	
+		border:solid;
+		border-color:#46c2eb transparent;
+		border-width:0 10px 10px 10px;
+		top: -10px;
+		content: "";
+		left:0;
+		position:absolute;
+		z-index:10;
        }
     }
     #headerIcon img {
