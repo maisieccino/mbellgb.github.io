@@ -60,25 +60,46 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   header { display:block; height:4em; background-color:#0099CC; }
-   header * {
-     display:inline-block;
-     vertical-align:middle;
-     margin-left:1em;
-     color:#EEE;
-   }
-    header h1 {
-      margin:0;
-    }
+	 header { display:block; height:4em; background-color:#0099CC; }
+         header * {
+           display:inline-block;
+           vertical-align:middle;
+           margin-left:1em;
+           color:#EEE;
+         }
+          header h1 {
+            margin:0;
+          }
+     @media(max-width:900px) { 
+       #menuToggle:before {
+         content:'\2630';
+         font-size:2em;
+	 cursor:pointer;
+       }
+         #menuToggle:hover {
+		background-color:#46C2EB;
+	 }
+       #headerIcon {
+       display:inline-block;
+       height:100%;
+       }
 
-     #menuToggle:before {
-       content:'\2630';
-       font-size:2em;
-     }
-    #headerIcon {
-     display:inline-block;
-     height:100%;
-     }
+       header ul {
+       	 display:none;
+       }
+	header ul a {
+		float:none;
+		display:block;
+	}
+       .menuClicked {
+		display:inline-block;
+		float:none;
+		z-index:10;
+		background-color:#46C2EB;
+		position:absolute;
+		left:5px; top:40px;
+       }
+    }
     #headerIcon img {
       zoom:2;
       display: block;
@@ -99,11 +120,12 @@ textarea {
     article {
 	width:75%;
 	background-color:#EEE;
-	margin: 0 auto;
+	margin: 1em auto;
 	padding:5px;
+	border: 1px single #d1d1d1;
     }    
 
-
+    
 
 
 
