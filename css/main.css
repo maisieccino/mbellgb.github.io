@@ -223,6 +223,15 @@ textarea {
      * Form Controls
      * ============
      */
+    input {
+	    padding:5px;
+	    font-size:1.25em;
+	    border-radius:5px;
+	    transition:background-color ease-out 0.25s;
+    }
+    .failInput {
+	    background-color:#D65249;
+    }
     button {
 	background-color:#0099cc;
 	color:#fff;
@@ -239,7 +248,9 @@ textarea {
 	button:active {
 		background-color:#07698A;
 	}
-
+    input[type="text"] {
+	border:1px solid #0099cc;
+    }
 
 
 

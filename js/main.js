@@ -7,3 +7,7 @@ $(document).ready(function() {
 		$(this).delay(200*index).fadeIn(500);
 	});	
 });
+
+function buttonTestClick() {
+	$('input[type="text"]').addClass('failInput');
+};

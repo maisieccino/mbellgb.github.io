@@ -4,6 +4,6 @@ $('#menuToggle').click(function() {
 
 $(document).ready(function() {
 	$('article').each(function(index) {
-		$(this).delay(100*index).fadeIn(500);
+		$(this).delay(200*index).fadeIn(500);
 	});	
 });

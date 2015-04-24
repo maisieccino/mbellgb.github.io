@@ -51,7 +51,8 @@
 
 		<article>
 			<h2>Form controls</h2>
-			<button>Button</button>
+			<button onClick="buttonTestClick">Button</button>
+			<input type="text">
 		</article>
 		<article>
 			<h2>Test Article 2</h2>
@@ -70,7 +71,7 @@
 		</article>
         </div>
 	<footer>
-		<previous /><next/>
+		
 		<p>Contact</p>
 	</footer>
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
