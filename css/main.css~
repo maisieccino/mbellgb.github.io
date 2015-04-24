@@ -110,6 +110,7 @@ textarea {
 		display:inline;
 		
 	}
+		.hero *:after {content:"\A"; white-space:pre; }
     	.hero h1 {
 		margin:0;
 		display:inline;
@@ -196,7 +197,8 @@ textarea {
 		position:absolute;
 		z-index:10;
        }
-    }
+   } 
+    
 
     @media(max-width:600px) {
 	#headerIcon img {
@@ -205,13 +207,14 @@ textarea {
 
 	#divMain {
 		width:100%;
-	}
-    }
+	} 	
+   }
 
     @media(max-width:500px) {
 	#headerIcon img {
 		display:none;
 	}
+	.hero h1,h2 { font-size:1em; }
     }
 
         

@@ -197,7 +197,8 @@ textarea {
 		position:absolute;
 		z-index:10;
        }
-    }
+   } 
+    
 
     @media(max-width:600px) {
 	#headerIcon img {
@@ -206,13 +207,15 @@ textarea {
 
 	#divMain {
 		width:100%;
-	}
-    }
+	} 	
+   }
 
     @media(max-width:500px) {
 	#headerIcon img {
 		display:none;
 	}
+	.hero h1 { font-size:1.25em }
+	.hero h2 { font-size:1em; }
     }
 
         
