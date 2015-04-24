@@ -35,6 +35,8 @@
         <div id="divMain">
 		<div style="background-image:url('img/hexagon.jpg');" class='hero'>
 			<h1>This is called a 'hero' image.</h1>
+			<h2>Additional things can be added here.</h2>
+			<button align="right">View more</button>
 		</div>
 		<article>
 			<h2>Test Article</h2>
@@ -68,6 +70,7 @@
 		</article>
         </div>
 	<footer>
+		<previous /><next/>
 		<p>Contact</p>
 	</footer>
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
