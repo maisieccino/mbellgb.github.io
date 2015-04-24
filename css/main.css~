@@ -93,12 +93,27 @@ textarea {
        height:100%;
        }
     #divMain {
-	width:75%;
+	width:100%;
 	margin:0 auto;
 	padding-bottom:4em;
     }
+    .hero {
+	width:calc(100%-4px);
+	height:14em;
+	border:2px solid #EEE;
+	border-top:0;
+	padding:0.25em 0;
+	background-size:cover;
+	vertical-align:bottom;
+    }
+    	.hero h1 {
+		margin:0;
+		color:#fff; background:rgba(30,30,30,0.7);
+		display:inline;
+	}
     article {
-	width:100%;
+	width:75%;
+	margin:0 auto;
 	background-color:#EEE;
 	margin: 1em auto;
 	padding:5px;
@@ -210,6 +225,9 @@ textarea {
     	button:hover {
 		background-color:#46c2eb;
 		
+	}
+	button:active {
+		background-color:#07698A;
 	}
 
 
