@@ -1,3 +1,9 @@
 $('#menuToggle').click(function() {
-	$('header ul a').toggleClass('menuClicked ');
+	$('header ul').toggleClass('menuClicked ');
+});
+
+$(document).ready(function() {
+	$('article').each(function(index) {
+		$(this).delay(100*index).fadeIn(500);
+	});	
 });
