@@ -70,50 +70,9 @@ textarea {
           header h1 {
             margin:0;
           }
-     @media(max-width:900px) { 
-       #menuToggle:before {
-         content:'\2630';
-         font-size:2em;
-	 cursor:pointer;
-       }
-         #menuToggle:hover {
-		background-color:#46C2EB;
-	 }
-       
 
-       header ul {
-       	 display:inline-block;
-	 opacity:0;
-         color:#EEE;
-	 transition:visibility linear 0.5s, opacity 0.2s linear;
-	}
-       header ul a {
-		float:none;
-		display:block;
-		font-size:1.225em;
-	}
-       .menuClicked {
-		visibility:visible;
-		opacity:1;
-		float:none;
-		z-index:10;
-		background-color:#46C2EB;
-		position:absolute;
-		left:0; top:50px;
-		padding:5px;
-       }
-       header ul:before {	
-		border:solid;
-		border-color:#46c2eb transparent;
-		border-width:0 10px 10px 10px;
-		top: -10px;
-		content: "";
-		left:0;
-		position:absolute;
-		z-index:10;
-       }
-    }
-    #headerIcon img {
+     
+     #headerIcon img {
       zoom:2;
       display: block;
       margin: auto;
@@ -168,7 +127,73 @@ textarea {
 	width:100%; height:4em;
 	background-color:#222; color:#eee;
       }
-    
+
+
+     @media(max-width:900px) {
+       /* Mainly, this media query
+	* replaces the nav bar with
+	* a drop down menu.
+	*/ 
+       #menuToggle:before {
+         content:'\2630';
+         font-size:2em;
+	 cursor:pointer;
+       }
+         #menuToggle:hover {
+		background-color:#46C2EB;
+	 }
+       
+
+       header ul {
+       	 display:inline-block;
+	 opacity:0;
+         color:#EEE;
+	 transition:visibility linear 0.5s, opacity 0.2s linear;
+	}
+       header ul a {
+		float:none;
+		display:block;
+		font-size:1.225em;
+	}
+       .menuClicked {
+		visibility:visible;
+		opacity:1;
+		float:none;
+		z-index:10;
+		background-color:#46C2EB;
+		position:absolute;
+		left:0; top:50px;
+		padding:5px;
+       }
+       header ul:before {	
+		border:solid;
+		border-color:#46c2eb transparent;
+		border-width:0 10px 10px 10px;
+		top: -10px;
+		content: "";
+		left:0;
+		position:absolute;
+		z-index:10;
+       }
+    }
+
+    @media(max-width:600px) {
+	#headerIcon img {
+		zoom:1;
+	}
+
+	#divMain {
+		width:100%;
+	}
+    }
+
+    @media(max-width:500px) {
+	#headerIcon img {
+		display:none;
+	}
+    }
+
+        
     /* =============
      * Form Controls
      * ============
