@@ -95,7 +95,7 @@ textarea {
     #divMain {
 	width:100%;
 	margin:0 auto;
-	padding-bottom:4em;
+	padding-bottom:5em;
     }
     .hero {
 	width:calc(100%-4px);
@@ -115,6 +115,12 @@ textarea {
 		margin:0;
 		display:inline;
 		vertical-align:bottom;
+	}
+	div .bigarticle {
+		width:75%;
+		margin:0 auto;
+		margin:1em auto;
+		padding:10px;
 	}
     article {
 	width:75%;
