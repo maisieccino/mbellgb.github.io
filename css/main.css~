@@ -116,6 +116,12 @@ textarea {
 		display:inline;
 		vertical-align:bottom;
 	}
+	div .bigarticle {
+		width:75%;
+		margin:0 auto;
+		margin:1em auto;
+		padding:10px;
+	}
     article {
 	width:75%;
 	margin:0 auto;
