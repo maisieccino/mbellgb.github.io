@@ -94,7 +94,7 @@ textarea {
        }
     #divMain {
 	width:100%;
-	margin:0 auto;
+	margin:0 auto 10px;
     }
     .hero {
 	width:calc(100%-4px);
@@ -125,7 +125,7 @@ textarea {
 	width:75%;
 	background-color:#EEE;
 	margin: 1em auto;
-	/*padding:5px;*/
+	padding:5px;
 	border: 1px single #d1d1d1;
 	box-shadow:2px 2px #d1d1d1;
 	position:relative;top:20px;
@@ -137,9 +137,6 @@ textarea {
 		top:0;
 		visibility:visible;
 	}
-	article p {
-		padding:5px;
-	}
       article h2 {
 	      margin:0;
       }
@@ -147,12 +144,14 @@ textarea {
 	      margin-top:0;
       }
 	p.articleBar {
-		margin:0;
+		margin:-5px;
+		padding:0 5px;
 		width:calc(100%-10px);
 		background-color:#B3AFAA;
 	}	
       footer {
 	width:100%; min-height:4em;
+	margin-top:5px;
 	background-color:#222; color:#eee;
 	padding:5px 0;
       }
