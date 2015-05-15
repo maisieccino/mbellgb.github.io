@@ -156,6 +156,20 @@ textarea {
       footer * {
 	      text-align:center;
       }
+      .circled {
+	font-size:36px;
+	vertical-align:middle;
+	border:2px solid #eee;
+	padding:0 4px;
+	border-radius:22px;
+	cursor:pointer;
+	transition:background-color 0.2s, color 0.2s;
+	margin:0 5px;
+      }
+	.circled:hover {
+		background-color:#eee;
+		color:#222;
+	}	
 
      @media(max-width:900px) {
        /* Mainly, this media query
