@@ -95,7 +95,6 @@ textarea {
     #divMain {
 	width:100%;
 	margin:0 auto;
-	padding-bottom:5em;
     }
     .hero {
 	width:calc(100%-4px);
@@ -124,13 +123,11 @@ textarea {
 	}
     article {
 	width:75%;
-	margin:0 auto;
 	background-color:#EEE;
 	margin: 1em auto;
-	padding:5px;
+	/*padding:5px;*/
 	border: 1px single #d1d1d1;
 	box-shadow:2px 2px #d1d1d1;
-	/*visibility:hidden; opacity:0;
 	position:relative;top:20px;
 	transition:opacity 0.2s linear,top 0.2s linear;*/
 	display:none;
@@ -140,18 +137,24 @@ textarea {
 		top:0;
 		visibility:visible;
 	}
+	article p {
+		padding:5px;
+	}
       article h2 {
 	      margin:0;
       }
       article h3 {
 	      margin-top:0;
-      }	
+      }
+	p.articleBar {
+		margin:0;
+		width:calc(100%-10px);
+		background-color:#B3AFAA;
+	}	
       footer {
-	position:fixed;
-	bottom:0;
-	left:0;
 	width:100%; min-height:4em;
 	background-color:#222; color:#eee;
+	padding:5px 0;
       }
       footer * {
 	      text-align:center;

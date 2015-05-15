@@ -71,8 +71,7 @@
 		</article>
         </div>
 	<footer>
-		<p>Page 1 of 10 <a class="circled">&#10145;</a></p>
-		<p>Contact</p>
+		<p><a class="circled">&#11013;</a>Page 1 of 10 <a class="circled">&#10145;</a></p>
 	</footer>
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
         <script src="js/plugins.js"></script>
