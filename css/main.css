@@ -70,7 +70,114 @@ textarea {
           header h1 {
             margin:0;
           }
-     @media(max-width:900px) { 
+
+     
+     #headerIcon img {
+      zoom:2;
+      display: block;
+      margin: auto;
+
+      height: auto;
+      max-height: 100%;
+
+      width: auto;
+      max-width: 100%;
+    }
+    header ul {
+      float:right;
+      margin-right:2em;
+      vertical-align:middle;
+    }
+    #headerIcon {
+       display:inline-block;
+       height:100%;
+       }
+    #divMain {
+	width:100%;
+	margin:0 auto 10px;
+    }
+    .hero {
+	width:calc(100%-4px);
+	height:14em;
+	border:2px solid #EEE;
+	border-top:0;
+	padding:0.25em 0;
+	background-size:cover;
+    }
+        .hero * {
+		color:#fff; background:rgba(30,30,30,0.7);
+		display:inline;
+		
+	}
+		.hero *:after {content:"\A"; white-space:pre; }
+    	.hero h1 {
+		margin:0;
+		display:inline;
+		vertical-align:bottom;
+	}
+	div .bigarticle {
+		width:75%;
+		margin:0 auto;
+		margin:1em auto;
+		padding:10px;
+	}
+    article {
+	width:75%;
+	background-color:#EEE;
+	margin: 1em auto;
+	padding:5px;
+	border: 1px single #d1d1d1;
+	box-shadow:2px 2px #d1d1d1;
+	position:relative;top:20px;
+	transition:opacity 0.2s linear,top 0.2s linear;*/
+	display:none;
+    }
+    	.articleLoaded {
+		opacity:1;
+		top:0;
+		visibility:visible;
+	}
+      article h2 {
+	      margin:0;
+      }
+      article h3 {
+	      margin-top:0;
+      }
+	p.articleBar {
+		margin:-5px;
+		padding:0 5px;
+		width:calc(100%-10px);
+		background-color:#B3AFAA;
+	}	
+      footer {
+	width:100%; min-height:4em;
+	margin-top:5px;
+	background-color:#222; color:#eee;
+	padding:5px 0;
+      }
+      footer * {
+	      text-align:center;
+      }
+      .circled {
+	font-size:36px;
+	vertical-align:middle;
+	border:2px solid #eee;
+	padding:0 4px;
+	border-radius:22px;
+	cursor:pointer;
+	transition:background-color 0.2s, color 0.2s;
+	margin:0 5px;
+      }
+	.circled:hover {
+		background-color:#eee;
+		color:#222;
+	}	
+
+     @media(max-width:900px) {
+       /* Mainly, this media query
+	* replaces the nav bar with
+	* a drop down menu.
+	*/ 
        #menuToggle:before {
          content:'\2630';
          font-size:2em;
@@ -79,25 +186,22 @@ textarea {
          #menuToggle:hover {
 		background-color:#46C2EB;
 	 }
-       #headerIcon {
-       display:inline-block;
-       height:100%;
-       }
+       
 
        header ul {
        	 display:inline-block;
 	 opacity:0;
          color:#EEE;
-	 transition:visibility 0s linear 0.5s, opacity 0.5s linear;
+	 transition:visibility linear 0.5s, opacity 0.2s linear;
 	}
        header ul a {
 		float:none;
 		display:block;
+		font-size:1.225em;
 	}
        .menuClicked {
 		visibility:visible;
 		opacity:1;
-		transition:visibility 0s linear 0.5s, opacity 0.5s linear;
 		float:none;
 		z-index:10;
 		background-color:#46C2EB;
@@ -115,36 +219,60 @@ textarea {
 		position:absolute;
 		z-index:10;
        }
-    }
-    #headerIcon img {
-      zoom:2;
-      display: block;
-      margin: auto;
-
-      height: auto;
-      max-height: 100%;
-
-      width: auto;
-      max-width: 100%;
-    }
-    header ul {
-      float:right;
-      margin-right:2em;
-      vertical-align:middle;
-    }
+   } 
     
-    article {
-	width:75%;
-	background-color:#EEE;
-	margin: 1em auto;
+
+    @media(max-width:600px) {
+	#headerIcon img {
+		zoom:1;
+	}
+
+	#divMain {
+		width:100%;
+	} 	
+   }
+
+    @media(max-width:500px) {
+	#headerIcon img {
+		display:none;
+	}
+	.hero h1 { font-size:1.25em }
+	.hero h2 { font-size:1em; }
+    }
+
+        
+    /* =============
+     * Form Controls
+     * ============
+     */
+    input {
+	    padding:5px;
+	    font-size:1.25em;
+	    border-radius:5px;
+	    transition:background-color ease-out 0.25s;
+    }
+    .failInput {
+	    background-color:#D65249;
+    }
+    button {
+	background-color:#0099cc;
+	color:#fff;
+	border:2px solid #fff;
 	padding:5px;
-	border: 1px single #d1d1d1;
-    }    
-
-    
-
-
-
+	font-size:1.25em;
+	border-radius:5px;
+	transition:background-color linear 0.25s;
+    }
+    	button:hover {
+		background-color:#46c2eb;
+		
+	}
+	button:active {
+		background-color:#07698A;
+	}
+    input[type="text"] {
+	border:1px solid #0099cc;
+    }
 
 
 

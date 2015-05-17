@@ -9,7 +9,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="google-site-verification" content="Gi0GbzQE3l0MHtAtD8jedE_-l25Dvv2hdj3SsGpuo8E" />
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
@@ -33,8 +33,29 @@
         </header>
 
         <div id="divMain">
+		<div style="background-image:url('img/hexagon.jpg');" class='hero'>
+			<h1>My projects</h1>
+			<h2>A list of various programming and web dev projects I've been working on.</h2>
+			<button align="right">View more</button>
+		</div>
 		<article>
 			<h2>Test Article</h2>
+			<h3>22nd April 2015</h3>
+			<p>Blah blah blah de blah etc</>
+		</article>
+		<article>
+			<h2>Test Article 2</h2>
+			<h3>22nd April 2015</h3>
+			<p>Blah blah blah de blah etc</p>
+		</article>
+
+		<article>
+			<h2>Form controls</h2>
+			<button onClick="buttonTestClick();">Button</button>
+			<input type="text">
+		</article>
+		<article>
+			<h2>Test Article 2</h2>
 			<h3>22nd April 2015</h3>
 			<p>Blah blah blah de blah etc</p>
 		</article>
@@ -43,7 +64,15 @@
 			<h3>22nd April 2015</h3>
 			<p>Blah blah blah de blah etc</p>
 		</article>
+		<article>
+			<h2>Test Article 3</h2>
+			<h3>22nd April 2015</h3>
+			<p>Blah blah blah de blah etc</p>
+		</article>
         </div>
+	<footer>
+		<p><a class="circled">&#11013;</a>Page 1 of 10 <a class="circled">&#10145;</a></p>
+	</footer>
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
