@@ -121,6 +121,11 @@ textarea {
 		margin:1em auto;
 		padding:10px;
 	}
+	.attr {
+		position:absolute;
+		right:0; bottom:0;
+		color:#fff; background:#000;
+	}
     article {
 	width:75%;
 	background-color:#EEE;
@@ -259,6 +264,7 @@ textarea {
 	color:#fff;
 	border:2px solid #fff;
 	padding:5px;
+	margin-left:2px;
 	font-size:1.25em;
 	border-radius:5px;
 	transition:background-color linear 0.25s;
