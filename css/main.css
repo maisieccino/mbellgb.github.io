@@ -99,10 +99,11 @@ textarea {
     .hero {
 	width:calc(100%-4px);
 	height:14em;
-	border:2px solid #EEE;
+	/*border:2px solid #EEE;*/
 	border-top:0;
 	padding:0.25em 0;
 	background-size:cover;
+	margin-bottom:5px;
     }
         .hero * {
 		color:#fff; background:rgba(30,30,30,0.7);
