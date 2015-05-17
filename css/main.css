@@ -117,7 +117,7 @@ textarea {
 		vertical-align:bottom;
 	}
 	div .bigarticle {
-		width:75%;
+		
 		margin:0 auto;
 		margin:1em auto;
 		padding:10px;
@@ -178,7 +178,11 @@ textarea {
 		background-color:#eee;
 		color:#222;
 	}	
-
+	@media(min-width:900px) {
+		.bigarticle {
+			width:75%;
+		}
+	}
      @media(max-width:900px) {
        /* Mainly, this media query
 	* replaces the nav bar with
@@ -235,7 +239,10 @@ textarea {
 
 	#divMain {
 		width:100%;
-	} 	
+	}
+	.bigarticle {
+		width:calc(100%-20px);
+	}	
    }
 
     @media(max-width:500px) {
