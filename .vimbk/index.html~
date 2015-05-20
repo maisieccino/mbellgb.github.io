@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Matthew Bell</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-site-verification" content="Gi0GbzQE3l0MHtAtD8jedE_-l25Dvv2hdj3SsGpuo8E" />
@@ -22,7 +22,7 @@
 
         <header>
           <span id="menuToggle"></span>
-          <span id="headerIcon"><img src="img/face.png"/></span>
+	  <a href="index.html"><span id="headerIcon"><img src="img/face.png"/></span></a>
           <h1>Matthew Bell</h1>
           <ul>
             <a href="index.html"><li>Home</li></a>
@@ -38,40 +38,35 @@
 			<h2>A list of various programming and web dev projects I've been working on.</h2>
 			<button align="right">View more</button>
 		</div>
-		<article>
+		<!--<article>
 			<h2>Test Article</h2>
 			<h3>22nd April 2015</h3>
 			<p>Blah blah blah de blah etc</>
-		</article>
-		<article>
-			<h2>Test Article 2</h2>
-			<h3>22nd April 2015</h3>
-			<p>Blah blah blah de blah etc</p>
-		</article>
-
-		<article>
-			<h2>Form controls</h2>
-			<button onClick="buttonTestClick();">Button</button>
-			<input type="text">
-		</article>
-		<article>
-			<h2>Test Article 2</h2>
-			<h3>22nd April 2015</h3>
-			<p>Blah blah blah de blah etc</p>
-		</article>
-		<article>
-			<h2>Test Article 2</h2>
-			<h3>22nd April 2015</h3>
-			<p>Blah blah blah de blah etc</p>
-		</article>
-		<article>
-			<h2>Test Article 3</h2>
-			<h3>22nd April 2015</h3>
-			<p>Blah blah blah de blah etc</p>
-		</article>
+			<p class="articleBar">Reblog Like Share</p>
+			</article>-->
+		<div class="bigarticle">
+			<h1>I'm a computer science student who likes to make things.</h1>
+			<h2>I'm also a fan of modest, sensible design.</h2>
+			<p>My personal belief is that design can sometimes be too much. I prefer subtle animations to crazy 3d flyouts, and it's definitely true that the devil is in the details.</p>
+			<div style="background-image:url('img/Start81.png')" class="hero">
+				<h1>My Inspirations</h1>
+				<p>Things that I like; stuff that inspires me.</p>
+				<button>Read more</button>
+			</div>
+			<div style="background-image:url('img/vim.png')" class="hero">
+				<h1>My Workflow</h1>
+				<p>The tools I use; the computers I type at.</p>
+				<button>Read more</button>
+			</div>
+			<div style="background-image:url('img/vim.png')" class="hero">
+				<h1>My Music</h1>
+				<p>The music I listen to.</p>
+				<a href="about.html#music"><button>Read more</button></a>
+			</div>
+		</div>
         </div>
 	<footer>
-		<p><a class="circled">&#11013;</a>Page 1 of 10 <a class="circled">&#10145;</a></p>
+		<!--<p><a class="circled">&#11013;</a>Page 1 of 10 <a class="circled">&#10145;</a></p>-->
 	</footer>
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
         <script src="js/plugins.js"></script>
