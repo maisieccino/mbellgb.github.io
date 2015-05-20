@@ -22,7 +22,7 @@
 
         <header>
           <span id="menuToggle"></span>
-	  <a href="index.html"><span id="headerIcon"><img src="img/face.png"/></span></a>
+	  <span id="headerIcon"><img src="img/face.png"/></span>
           <h1>Matthew Bell</h1>
           <ul>
             <a href="index.html"><li>Home</li></a>
