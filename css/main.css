@@ -127,6 +127,22 @@ textarea {
 		right:0; bottom:0;
 		color:#fff; background:#000;
 	}
+
+  .nagbar {
+    background-color:#E88F7D;
+    padding:5px;
+    font-size:1.25em;
+    font-style:italic;
+    color:#A13B27;
+    border:solid 2px #A13B27;
+  }
+
+  .warning {
+    background-color:#EDDB9F;
+    color:#9E873C;
+    border-color: #9E873C;
+  }
+
     article {
 	width:75%;
 	background-color:#EEE;
