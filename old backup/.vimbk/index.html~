@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Matthew Bell</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-site-verification" content="Gi0GbzQE3l0MHtAtD8jedE_-l25Dvv2hdj3SsGpuo8E" />
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+          <span id="menuToggle"></span>
+	  <span id="headerIcon"><img src="img/face.png"/></span>
+          <h1>Matthew Bell</h1>
+          <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+	    <a href="http://blog.mbell.ml"><li>Blog</li>
+	    <a href="https://github.com/logicnotlogical"><li>GitHub</li></a>
+          </ul>
+        </header>
+
+        <div id="divMain">
+		<div style="background-image:url('img/hexagon.jpg');" class='hero'>
+			<h1>My projects</h1>
+			<h2>A list of various programming and web dev projects I've been working on.</h2>
+			<button align="right">View more</button>
+		</div>
+		<!--<article>
+			<h2>Test Article</h2>
+			<h3>22nd April 2015</h3>
+			<p>Blah blah blah de blah etc</>
+			<p class="articleBar">Reblog Like Share</p>
+			</article>-->
+		<div class="bigarticle">
+			<h1>I'm a computer science student who likes to make things.</h1>
+			<h2>I'm also a fan of modest, sensible design.</h2>
+			<p>My personal belief is that design can sometimes be too much. I prefer subtle animations to crazy 3d flyouts, and it's definitely true that the devil is in the details.</p>
+			<div style="background-image:url('img/Start81.png')" class="hero">
+				<h1>My Inspirations</h1>
+				<p>Things that I like; stuff that inspires me.</p>
+				<button>Read more</button>
+			</div>
+			<div style="background-image:url('img/vim.png')" class="hero">
+				<h1>My Workflow</h1>
+				<p>The tools I use; the computers I type at.</p>
+				<button>Read more</button>
+			</div>
+			<div style="background-image:url('img/vim.png')" class="hero">
+				<h1>My Music</h1>
+				<p>The music I listen to.</p>
+				<a href="about.html#music"><button>Read more</button></a>
+			</div>
+		</div>
+        </div>
+	<footer>
+		<!--<p><a class="circled">&#11013;</a>Page 1 of 10 <a class="circled">&#10145;</a></p>-->
+	</footer>
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
