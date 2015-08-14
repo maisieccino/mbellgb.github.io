@@ -1,6 +1,6 @@
 /* Media Queries
  */
- @media (max-width:480px) {
+ @media (max-width:780px) {
 	 section, footer {
 		 width:96%;
 		 padding:5px 2%;
@@ -10,7 +10,7 @@
          padding:5px 0;
      }
  }
- @media (min-width:480px) {
+ @media (min-width:780px) {
 	 section, footer {
 	 	width:50%;
 	 	padding:10px 25%;
