@@ -31,7 +31,7 @@
 	header {
          background-size:cover;
          background-repeat:no-repeat;
-         background-position: right;
+         background-position: center;
      }
  }
 
@@ -56,6 +56,7 @@ header {
     #homeHeader {
         background-image:url('../img/banner.png');
         background-size: contain;
+        background-position: right;
     }
 	header h1 {
 		margin:0;
