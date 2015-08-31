@@ -29,7 +29,7 @@
 	}
 
 	header {
-         background-size:contain;
+         background-size:cover;
          background-repeat:no-repeat;
          background-position: right;
      }
@@ -55,6 +55,7 @@ header {
 }
     #homeHeader {
         background-image:url('../img/banner.png');
+        background-size: contain;
     }
 	header h1 {
 		margin:0;

@@ -14,7 +14,7 @@
 	<ul>
 		<li><a href="/">Home</a></li>
 		<li><a href="ask.html">Ask Me Anything!</a></li>
-		<li><a href="matthewb.me">Back to mbell.ml</a></li>
+		<li><a href="http://matthewb.me">Back to mbell.ml</a></li>
 	</nav>
 	{block:IndexPage}
 	<header id="homeHeader">
@@ -60,6 +60,13 @@
 	</footer>
 </body>
 <script src="http://matthewb.me/js/jquery-1.11.3.min.js"></script>
+{block:PermalinkPage}
+<script>
+	$(document).ready(function() {
+		$('header').css("background-image",$('.heroImage').css("background-image"));
+	});
+</script>
+{/block:PermalinkPage}
 </html>
 <!-- http://paletton.com/palette.php?uid=33y0u0k%2B%2BPkt3ZPJR%2BV%2BWva%2B4oy
 -->
