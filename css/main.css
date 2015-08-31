@@ -66,7 +66,7 @@ header {
         display:inline;
         background-color: rgba(0,0,0,0.5);
     }
-        #homeHeader * {
+        #homeHeader h1,h2,h3 {
             background:none;
             display:block;
         }
