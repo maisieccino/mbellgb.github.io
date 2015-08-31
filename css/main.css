@@ -65,11 +65,10 @@ header {
     header * {
         display:inline;
         background-color: rgba(0,0,0,0.5);
+        float:left;
     }
-        #homeHeader h1,h2,h3 {
-            background:none;
-            display:block;
-        }
+        #homeHeader * {background:none; float:none;}
+        #homeHeader h1,h2,h3 {display:block;}
 	header a:hover {
 		background-color:#FFC000;
 		color:#00457E;
