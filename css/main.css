@@ -70,7 +70,6 @@ header {
             content:"\A";
             white-space: pre;
         }
-        #homeHeader * {background:none; float:none;}
 	header a:hover {
 		background-color:#FFC000;
 		color:#00457E;
