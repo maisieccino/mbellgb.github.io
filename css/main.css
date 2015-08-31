@@ -71,12 +71,7 @@ header {
             content:"\A";
             white-space: pre;
         }
-            #homeHeader *:after {
-                content="";
-                white-space: normal;
-            }
         #homeHeader * {background:none; float:none;}
-        #homeHeader h1,h2,h3 {display:block;}
 	header a:hover {
 		background-color:#FFC000;
 		color:#00457E;
