@@ -141,7 +141,7 @@ article {
         margin:0 5px 0 0;
         line-height:2.5rem;
     }
-    article a:hover * {
+    article a:hover {
         background-color:#000;
         color:#fff;
     }
