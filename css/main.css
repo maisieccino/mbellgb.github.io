@@ -67,6 +67,14 @@ header {
         background-color: rgba(0,0,0,0.5);
         float:left;
     }
+        header *:after {
+            content:"\A";
+            white-space: pre;
+        }
+            #homeHeader *:after {
+                content="";
+                white-space: normal;
+            }
         #homeHeader * {background:none; float:none;}
         #homeHeader h1,h2,h3 {display:block;}
 	header a:hover {
