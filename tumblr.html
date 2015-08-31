@@ -24,8 +24,21 @@
 	</header>
 	<section>
 		{block:Posts}
-		yo
+			<div class="indexPost">
+			{block:Text}
+				{block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+				<h3>Posted on {DayOfMonth}{DayOfMonthSuffix} of {Month}, {Year} {block:NoteCount}&#x25CF; <a href="{Permalink}#Notes">{NoteCountWithLabel}{/block:NoteCount}</a></h3>
+				{Body}
+			{/block:Text}
+			</div>
 		{/block:Posts}
+
+		{block:Pagination}
+		<section class="pagination">
+			<h4>You are on page</h4>
+			<h1>{block:PreviousPage}<a href="{PreviousPage}" class="paginationButton">&#x25c4;</a>{/block:PreviousPage}{CurrentPage}{block:NextPage}<a href="{NextPage}" class="paginationButton">&#x25ba;</a>{/block:NextPage}</h1>
+		</section>
+		{/block:Pagination}
 	</section>
 	{/block:IndexPage}
 
@@ -33,6 +46,13 @@
 	<header>
 		{block:PostSummary}<h1>{PostSummary}</h1>{/block:PostSummary}
 	</header>
+	{block:Posts}
+	<article>
+		{block:Text}
+		{Body}
+		{/block:Text}
+	</article>
+	{/block:Posts}
 	{/block:PermalinkPage}
 
 	<footer>
