@@ -62,7 +62,7 @@ header {
 		margin:0;
 		font-size:3rem;
 	}
-    header * {
+    #articleHeader * {
         display:inline;
         background-color: rgba(0,0,0,0.5);
     }
