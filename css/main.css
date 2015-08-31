@@ -62,6 +62,13 @@ header {
 		margin:0;
 		font-size:3rem;
 	}
+    header * {
+        display:inline;
+        background-color: rgba(0,0,0,0.5);
+    }
+        #homeHeader * {
+            background-color:none;
+        }
 	header a:hover {
 		background-color:#FFC000;
 		color:#00457E;
