@@ -45,6 +45,7 @@
 	{block:PermalinkPage}
 	<header>
 		{block:PostSummary}<h1>{PostSummary}</h1>{/block:PostSummary}
+		<h3>Posted on {DayOfMonth}{DayOfMonthSuffix} of {Month}, {Year} {block:NoteCount}&#x25CF; <a href="#Notes">{NoteCountWithLabel}{/block:NoteCount}</a></h3>
 	</header>
 	{block:Posts}
 	<article>
@@ -52,6 +53,12 @@
 		{Body}
 		{/block:Text}
 	</article>
+	<section>
+		<h2><a id="notes">Notes</a></h2>
+		{block:PostNotes}
+			{PostNotes-16}
+		{/block:PostNotes}
+	</section>
 	{/block:Posts}
 	{/block:PermalinkPage}
 
