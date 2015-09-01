@@ -60,6 +60,7 @@ header {
     header #avatar {
         height:10rem;
         float:left;
+        margin-right:10px;
     }
    	header h1 {
 		margin:0;
