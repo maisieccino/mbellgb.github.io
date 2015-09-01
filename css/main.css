@@ -55,8 +55,12 @@ header {
 	color:#F7CA18;
 	height:9em;
 	margin-top:3rem;
-	padding:3rem 1rem;	
+	padding:3rem 1rem;
 }
+    header #avatar {
+        height:10rem;
+        float:left;
+    }
    	header h1 {
 		margin:0;
 		font-size:3rem;
@@ -135,7 +139,7 @@ article {
     background:#fff;
 	color:#222;
 }
-	article * { 
+	article * {
 		color:#222;
 		font-family:Merriweather,Garamond,serif;
 	}
