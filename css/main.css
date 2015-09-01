@@ -53,11 +53,11 @@ header {
 	margin-top:3rem;
 	padding:3rem 1rem;
 }
-    #homeHeader {
+    /*#homeHeader {
         background-image:url('../img/banner.png');
         background-size: contain;
         background-position: right;
-    }
+    }*/
 	header h1 {
 		margin:0;
 		font-size:3rem;
