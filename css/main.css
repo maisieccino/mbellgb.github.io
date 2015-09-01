@@ -1,5 +1,8 @@
 /* Media Queries
  */
+
+@import url(https://fonts.googleapis.com/css?family=Lato|Merriweather:400,300italic,400italic,700|Exo+2);
+
  @media (max-device-width:480px) {
 	 section, article footer {
 		 width:96%;
@@ -39,26 +42,22 @@
   */
 body {
 	margin:0;
-    background:#000;
+    background:#222;
+	color:#222;
 }
 
 * {
-	font-family:Signika,Arial,sans-serif;
+	font-family:'Lato',Arial,sans-serif;
 }
 
 header {
-	background-color:#007ADE;
-	color:#FFC000;
+	background-color:#446CB3;
+	color:#F7CA18;
 	height:9em;
 	margin-top:3rem;
-	padding:3rem 1rem;
+	padding:3rem 1rem;	
 }
-    /*#homeHeader {
-        background-image:url('../img/banner.png');
-        background-size: contain;
-        background-position: right;
-    }*/
-	header h1 {
+   	header h1 {
 		margin:0;
 		font-size:3rem;
 	}
@@ -81,8 +80,8 @@ nav {
 	position:fixed;
 	top:0;
 	left:0;
-	background-color:#FFC000;
-	color:#00457E;
+	background-color:#F7CA18;
+	color:#446CB3;
 }
 	nav ul {
 		list-style:none;
@@ -100,40 +99,46 @@ nav {
 			line-height:3rem;
 		}
 	nav a:hover {
-		background-color:#007ADE;
-		color:#FFC000;
+		background-color:#446CB3;
+		color:#F7CA18;
 	}
 footer {
-    background-color:#000;
-    color:#FFC000;
+    background-color:#222;
+    color:#F89406;
     text-align:center;
 }
 
 /* Section colours
  */
 section:nth-of-type(3n+1) {
-	color:#C43A00;
-	background-color: #DEDEDE;
+	color:#D35400;
+	background-color: #D2D7D3;
 }
 	section:nth-of-type(3n+1) a:hover {
-		background-color:#C43A00;
-		color:#FFFFFF;
+		background-color:#D35400;
+		color:#EEE;
 	}
 section:nth-of-type(3n+2) {
-	background-color:#FF5D17;
+	color:#222;
+	background-color:#F9690E;
 }
     section:nth-of-type(3n+2) a:hover {
-        background-color:#000;
-        color:#FF5D17;
+        background-color:#222;
+        color:#F9690E;
     }
 section:nth-of-type(3n) {
-    background-color:#FFC000;
-    color:#00457E;
+    background-color:#F7CA18;
+    color:#3A539B;
 }
 
 article {
     background:#fff;
+	color:#222;
 }
+	article * { 
+		color:#222;
+		font-family:Merriweather,Garamond,serif;
+	}
     article p:first-of-type::first-letter {
         font-size:2.5rem;
         float:left;
@@ -144,6 +149,10 @@ article {
         background-color:#000;
         color:#fff;
     }
+	article caption {
+		font-style:italic;
+		font-weight:300;
+	}
 .indexPost {
     border-top:dashed 2px;
 }
@@ -172,6 +181,8 @@ article {
 }
     .paginationButton:hover {
         opacity: 1;
+		background:none !important;
+		color:#222 !important;
     }
 
 .showcase-container {
