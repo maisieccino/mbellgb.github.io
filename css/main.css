@@ -15,6 +15,9 @@
 	 html {
 		 font-size:36px;
 	 }
+	 header #avatar {
+		 height:5rem;
+	 }
  }
  @media (min-device-width:481px) {
 	section, article, footer {
@@ -23,6 +26,9 @@
 	}
 	.showcase-container div {
 			width:calc(50% - 10px);
+	}
+	header #avatar {
+		height:10rem;
 	}
  }
  @media (min-device-width:760px) {
@@ -54,6 +60,7 @@ body {
 
 * {
 	font-family:'Lato',Arial,sans-serif;
+	word-wrap:break-word;
 }
 
 header {
@@ -64,7 +71,7 @@ header {
 	padding:3rem 1rem;
 }
     header #avatar {
-        height:10rem;
+        /*height:10rem;*/
         float:left;
         margin-right:10cpx;
     }
