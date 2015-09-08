@@ -3,6 +3,8 @@
 <head>
 	<!-- -->
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/emojione/1.5.0/assets/css/emojione.min.css">
+	<script src="//cdn.jsdelivr.net/emojione/1.5.0/lib/js/emojione.min.js"></script>
 	<title>Matthew Bell</title>
 </head>
 
@@ -26,7 +28,7 @@
 
 	<section>
 		<h1>My works</h1>
-		<p>Here's a couple of things that I've done.</p>
+		<p class="convert-emoji">Here's a couple of things that I've done. :grinning:</p>
 		<div class="showcase-container">
 			<div>
 				<img src="img/project1.jpg" width="100%"/>
@@ -50,10 +52,21 @@
 	</section>
 
 	<footer>
+		<p>This site uses emoji provided by <a href="//emojione.com/">Emoji One</a>. Check out their project!</p>
 		<p>(c) 2015 Matthew Bell. All views are mine and do not constitute those of my employer or place of education.</p>
 	</footer>
 </body>
 <script src="js/jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function() {
+        $(".convert-emoji").each(function() {
+            var original = $(this).html();
+            // use .shortnameToImage if only converting shortnames (for slightly better performance)
+            var converted = emojione.toImage(original);
+            $(this).html(converted);
+        });
+    });
+</script>
 </html>
 <!-- http://paletton.com/palette.php?uid=33y0u0k%2B%2BPkt3ZPJR%2BV%2BWva%2B4oy
 -->
