@@ -31,12 +31,14 @@
 		width:calc(50% - 10px);
 	}
 
-	header {
-         background-size:cover;
-         background-repeat:no-repeat;
-         background-position: center;
-     }
+
  }
+
+ header {
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position: center;
+    }
 
  /* Display elements
   */
