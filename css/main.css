@@ -134,7 +134,7 @@ code {
     padding: 1px;
     display: inline-block;
     background: #dedede;
-    font-family: monospace;!important
+    font-family: monospace !important;
 }
 pre code {
 	display:block;
