@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>
+        {% if page.title and page.title != "Home" %}
+            {{ page.title }} -
+        {% endif %}
+        {% if event_category_result %}
+            {{ event_category_label_result }} -
+        {% endif %}
+        {{ site.title }}
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ "/assets/bower_components/normalize-css/normalize.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+</head>
+
+<body>
+    {% include nav.html %}
+    {{ content }}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ "/assets/all.js" | prepend: site.baseurl }}"></script>
+</body>
+</html>
