@@ -3,6 +3,22 @@
 
 html, body { background-color: #eceee5; color: #272726; }
 
-nav { background-color: #ef767a; color: #eceee5; }
+.main { width: 70%; padding: 0 15%; }
+
+.jumbo { background-color: #ef767a; color: #fed766; overflow: hidden; width: 70%; padding: 0 15%; font-size: 2rem; min-height: 75vh; }
+
+@media (min-width: 48rem) { .jumbo { font-size: 3rem; min-height: 30rem; } }
+
+nav { background-color: #456990; color: #eceee5; width: 70%; padding: 0.5rem 15%; font-size: 1.2rem; }
+
+nav ul { list-style: none; margin: 0; padding: 0.2rem 0; }
+
+nav li { display: inline-block; padding: 0 0.5rem; }
+
+nav a { text-decoration: none; color: inherit; }
+
+.jumbo.home { position: relative; z-index: 0; }
+
+.jumbo.home:before { z-index: -1; position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: block; content: ''; background: url("/assets/img/london.jpg"); background-size: cover; background-position: center; opacity: 0.4; }
 
 /*# sourceMappingURL=main.css.map */

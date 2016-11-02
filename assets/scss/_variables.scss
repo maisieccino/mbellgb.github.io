@@ -6,3 +6,15 @@ $color-black:  #272726;
 $color-white:  #eceee5;
 
 $font-titles: 'Rubik', sans-serif;
+
+$page-width: 70%;
+$page-padding: ( 100% - $page-width ) / 2;
+
+$breakpoints: (
+    xs: 32rem,
+    sm: 48rem,
+    md: 72rem,
+    lg: 96rem,
+    xl: 102rem,
+    xx: 120rem
+);

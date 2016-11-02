@@ -8,7 +8,21 @@ html,body {
     color: $color-black;
 }
 
-nav {
+.main {
+    width: $page-width;
+    padding: 0 $page-padding;
+}
+
+.jumbo {
     background-color: $color-red;
-    color: $color-white;
+    color: $color-yellow;
+    overflow: hidden;
+    width: $page-width;
+    padding: 0 $page-padding;
+    @include break(sm) {
+        font-size: 3rem;
+        min-height: 30rem;
+    }
+    font-size: 2rem;
+    min-height: 75vh;
 }
