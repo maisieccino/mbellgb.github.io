@@ -1,21 +1,69 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:500,500i,900");
 * { font-family: Rubik; font-weight: 500; }
 
-html, body { background-color: #eceee5; color: #272726; }
+::-moz-selection { background-color: #81C3D7; }
 
-.main { width: 70%; padding: 0 15%; }
+::selection { background-color: #81C3D7; }
 
-.jumbo { background-color: #ef767a; color: #fed766; overflow: hidden; width: 70%; padding: 0 15%; font-size: 2rem; min-height: 75vh; }
+html, body { background-color: #D9DCD6; color: #272726; }
+
+.main { width: calc(100% - 2rem); padding: 0 1rem; font-size: 1.2rem; }
+
+@media (min-width: 48rem) { .main { width: 70%; padding: 0 15%; } }
+
+.jumbo { background-color: #81C3D7; color: #083D77; overflow: hidden; width: 70%; padding: 0 15%; font-size: 2rem; min-height: 75vh; }
 
 @media (min-width: 48rem) { .jumbo { font-size: 3rem; min-height: 30rem; } }
 
-nav { background-color: #456990; color: #eceee5; width: 70%; padding: 0.5rem 15%; font-size: 1.2rem; }
+a.button { background-color: #083D77; color: #81C3D7; text-decoration: none; display: block; font-size: 1.5rem; text-align: center; padding: 0.75rem; cursor: pointer; border: #81C3D7 0.2rem solid; -webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out; transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out; }
 
-nav ul { list-style: none; margin: 0; padding: 0.2rem 0; }
+@media (min-width: 48rem) { a.button { display: inline-block; font-size: 1.3rem; padding: 0.5rem; } }
 
-nav li { display: inline-block; padding: 0 0.5rem; }
+a.button:hover { background-color: rgba(129, 195, 215, 0.8); color: #083D77; }
 
-nav a { text-decoration: none; color: inherit; }
+.cards-1 { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+@media (min-width: 48rem) { .cards-1 .card { width: calc((100% / 1) - (0.5rem * 1)); } }
+
+.cards-2 { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+@media (min-width: 48rem) { .cards-2 .card { width: calc((100% / 2) - (0.5rem * 2)); } }
+
+.cards-3 { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+@media (min-width: 48rem) { .cards-3 .card { width: calc((100% / 3) - (0.5rem * 3)); } }
+
+.cards-4 { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+@media (min-width: 48rem) { .cards-4 .card { width: calc((100% / 4) - (0.5rem * 4)); } }
+
+.cards-5 { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+@media (min-width: 48rem) { .cards-5 .card { width: calc((100% / 5) - (0.5rem * 5)); } }
+
+.card { background-color: #083D77; color: #81C3D7; padding: 0.5rem; overflow: hidden; margin: 0.5rem 0; }
+
+@media (min-width: 48rem) { .card { margin: 0.5rem 0.25rem; } }
+
+.card h3 { font-size: 1.75rem; margin: 0.2rem 0; }
+
+.card p { margin: 0.1rem 0; }
+
+.card a.button { margin-top: 0.5rem; }
+
+nav { background-color: #3A7CA5; color: #F4D35E; width: 70%; padding: 0 15%; }
+
+nav ul { list-style: none; margin: 0; padding: 0; }
+
+nav li { display: inline-block; }
+
+nav a { text-decoration: none; color: inherit; padding: 0.5rem; display: block; font-size: 1.3rem; }
+
+nav a:hover { background-color: rgba(39, 39, 38, 0.2); }
+
+.main a:not(.button) { color: inherit; text-decoration: none; text-transform: uppercase; padding: 0.1rem; background: rgba(39, 39, 38, 0.2); }
+
+.main a:not(.button):hover { color: #D9DCD6; background: #272726; }
 
 .jumbo.home { position: relative; z-index: 0; }
 
