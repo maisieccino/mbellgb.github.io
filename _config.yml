@@ -37,3 +37,11 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: projects
+    values:
+      layout: page

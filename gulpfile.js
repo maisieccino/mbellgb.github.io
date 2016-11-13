@@ -80,6 +80,7 @@ gulp.task('sass', function() {
      '!_site/**/*',
      '!*',
      '*.html',
+     '*.md',
      '*.yml',
    ], ['jekyll-rebuild']);
  });

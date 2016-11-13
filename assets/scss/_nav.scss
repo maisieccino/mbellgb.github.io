@@ -1,8 +1,12 @@
 nav {
     background-color: $color-blue;
     color: $color-yellow;
-    width: $page-width;
-    padding: 0 $page-padding;
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+    @include break(sm) {
+        width: $page-width;
+        padding: 0 $page-padding;
+    }
 
     ul {
         list-style: none;

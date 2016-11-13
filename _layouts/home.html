@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="jumbo home">
+<div class="jumbo" data-img="/assets/img/london.jpg">
     <h1>Matt Bell</h1>
     <p>Computer Science Student, London</p>
 </div>
@@ -14,16 +14,13 @@ layout: default
         {% for p in projects %}
             <div class="card">
                 <h3>{{ p.title }}</h3>
-                <p>{{ p.content | truncatewords: 30, ""}}</p>
-                <a class="button" href="{{ p.href }}">Learn More</a>
+                <p>{{ p.description }}</p>
+                <a class="button" href="{{ p.url }}">Learn More</a>
             </div>
         {% endfor %}
     </div>
-    <h2>Subtitle</h2>
-    <h3>Heading</h3>
-    <h4>Sub-heading</h4>
-    <h5>SubSubHeading</h5>
-    <p>Body text. <strong>Bold text.</strong> <i>Italic text</i></p>
-    <p>Here is <a href="//google.co.uk">some hyperlink</a>.</p>
-    <a href="//facebook.com" class="button">Button</a>
+
+    <a class="button" href="https://github.com/mbellgb"><i class="fa fa-github"></i> GitHub</a>
+    <a class="button" href="https://twitter.com/mbell_gb"><i class="fa fa-twitter"></i> Twitter</a>
+    <a class="button" href="https://medium.com/@mbellgb"><i class="fa fa-medium"></i> Medium</a>
 </div>

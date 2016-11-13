@@ -1,8 +1,18 @@
 ---
-layout: "default"
+layout: "page"
 title: Projects
+description: "What I'm currently working on."
 permalink: /projects/
 navigation: true
 order: 3
 ---
-<h1>Projects</h1>
+
+<div class="cards-3">
+    {% for p in site.projects %}
+    <div class="card">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+        <a class="button" href="{{ p.url }}">Learn More</a>
+    </div>
+    {% endfor %}
+</div>
