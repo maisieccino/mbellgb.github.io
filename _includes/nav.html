@@ -1,0 +1,24 @@
+<nav>
+    <ul>
+        {% assign pages = site.pages %}
+        {% for redirect in site.redirects %}
+            {% assign pages = pages | push: redirect %}
+        {% endfor %}
+
+        {% assign sorted_pages = pages | where: "navigation",true | sort: "order" %}
+        {% for p in sorted_pages %}
+            {% if p.title %}
+            <li>
+                <a href="{{ p.url | replace:'index.html','' | prepend: site.baseurl }}"
+                   {% if p.url == page.url %}
+                   class="current" aria-selected="true"
+                                   {% else %}
+                                   aria-selected="false"
+                                   {% endif %}>
+                    <span>{{ p.title }}</span>
+                </a>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

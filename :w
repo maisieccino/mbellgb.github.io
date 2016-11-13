@@ -1,0 +1,23 @@
+nav {
+    background-color: $color-yellow;
+    color: $color-blue;
+    width: $page-width;
+    padding: 0.5rem $page-padding;
+    font-size: 1.2rem;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0.2rem 0;
+    }
+
+    li {
+        display: inline-block;
+        padding: 0 0.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}

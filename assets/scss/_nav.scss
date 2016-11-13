@@ -1,0 +1,31 @@
+nav {
+    background-color: $color-blue;
+    color: $color-yellow;
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+    @include break(sm) {
+        width: $page-width;
+        padding: 0 $page-padding;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        padding: 0.5rem;
+        display: block;
+        font-size: 1.3rem;
+        &:hover {
+            background-color: rgba($color-black, 0.2);
+        }
+    }
+}

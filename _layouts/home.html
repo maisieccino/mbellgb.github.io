@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="jumbo" data-img="/assets/img/london.jpg">
+    <h1>Matt Bell</h1>
+    <p>Computer Science Student, London</p>
+</div>
+
+<div class="main">
+    <h1>Latest Projects</h1>
+    <div class="cards-3">
+        {% assign projects = site.projects | limit: 3 %}
+        {% for p in projects %}
+            <div class="card">
+                <h3>{{ p.title }}</h3>
+                <p>{{ p.description }}</p>
+                <a class="button" href="{{ p.url }}">Learn More</a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a class="button" href="https://github.com/mbellgb"><i class="fa fa-github"></i> GitHub</a>
+    <a class="button" href="https://twitter.com/mbell_gb"><i class="fa fa-twitter"></i> Twitter</a>
+    <a class="button" href="https://medium.com/@mbellgb"><i class="fa fa-medium"></i> Medium</a>
+</div>

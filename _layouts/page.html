@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="jumbo" {% if page.img %} data-img="{{ page.img | prepend: site.baseurl }}" {% endif %}>
+    {% if page.title %}
+        <h1>{{ page.title }}</h1>
+    {% endif %}
+    {% if page.description %}
+        <p>{{ page.description }}</p>
+    {% endif %}
+    {% if page.project_url %}
+        <a href="{{ page.project_url }}" class="button">Project Site</a>
+    {% endif %}
+</div>
+
+<div class="main">
+    {{ content }}
+</div>
