@@ -81,7 +81,7 @@ nav a { text-decoration: none; color: inherit; padding: 0.5rem; display: block; 
 
 nav a:hover { background-color: rgba(39, 39, 38, 0.2); }
 
-.main a:not(.button) { color: inherit; text-decoration: none; text-transform: uppercase; padding: 0.1rem; background: rgba(39, 39, 38, 0.2); }
+.main a:not(.button) { color: inherit; text-decoration: none; padding: 0.1rem; background: rgba(39, 39, 38, 0.2); }
 
 .main a:not(.button):hover { color: #D9DCD6; background: #272726; }
 

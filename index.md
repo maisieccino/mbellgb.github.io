@@ -7,3 +7,5 @@ navigation: true
 title: Home
 order: 1
 ---
+
+I'm an undergraduate student at UCL, studying a master's degree in computer science. As well as doing the stuff on my course, I also enjoy web development, attending hackathons, and sometimes going running. Below is a selection of my recent projects, as well as some links to some of my online profiles.
