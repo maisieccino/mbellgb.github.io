@@ -73,7 +73,7 @@ li > p { display: inline; }
 
 .jumbo:not(.jumbo-home) { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; padding-bottom: 3rem; background-size: cover; background-position: center; }
 
-.jumbo:not(.jumbo-home) > div { text-align: left; }
+.jumbo:not(.jumbo-home) > div { text-align: left; z-index: 1; }
 
 .jumbo:not(.jumbo-home) h1, .jumbo:not(.jumbo-home) h2, .jumbo:not(.jumbo-home) h2, .jumbo:not(.jumbo-home) a { background-color: #ED254E; display: inline; position: relative; padding-left: 0; }
 
@@ -96,6 +96,8 @@ li > p { display: inline; }
 .jumbo:not(.jumbo-home) ::-moz-selection { background-color: #171C44 !important; color: #ED254E !important; }
 
 .jumbo:not(.jumbo-home) ::selection { background-color: #171C44 !important; color: #ED254E !important; }
+
+.jumbo:not(.jumbo-home):after { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; background-color: rgba(249, 220, 92, 0.5); -webkit-transform: none; -ms-transform: none; transform: none; content: ''; opacity: 1; }
 
 body, html { margin: 0; min-height: 100%; position: relative; background-color: #ED254E; z-index: 1; overflow-x: hidden; overflow-y: visible; }
 
