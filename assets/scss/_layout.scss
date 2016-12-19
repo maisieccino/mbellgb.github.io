@@ -24,6 +24,10 @@ body.active {
     // opacity: 0;
     transition: all 0.25s ease-in-out;
 
+    ::selection {
+        background-color: $color_brand1;
+    }
+
     @include respond-to(tablet) {
         min-width: 30vw;
     }
@@ -245,6 +249,11 @@ body.active .container {
         align-self: stretch;
         text-align: center;
     }
+
+    ::selection {
+        background-color: $color_brand1;
+        color: $color_brand2;
+    }
 }
 
 .card-img {
@@ -269,5 +278,9 @@ footer {
     }
     &:after {
         display: none;
+    }
+
+    ::selection {
+        color: $color_brand1;
     }
 }

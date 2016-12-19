@@ -20,9 +20,11 @@ I aim to go to as many hackathons as I can- they're an awesome way of trying out
 
 ## 2016
 
-* **Junction (upcoming)** -- Helsinki, Finland.
+* **Porticode** -- London, England. Mentored, helped out at workshops and assisted hackers over the weekend.
 
-* **LauzHack (upcoming)** -- Lausanne, Switzerland. Supporting the hackathon by volunteering and mentoring.
+* **Junction** -- Helsinki, Finland. Created an Internet-connected letterbox. [Read more](https://devpost.com/software/junction2016-7upynt)
+
+* **LauzHack** -- Lausanne, Switzerland. Supported the hackathon by volunteering and mentoring over the weekend.
 
 * **Hack The North** -- Toronto, Canada. SpicyGifMeme, An app that finds GIFs that match a piece of music the user uploads.
 

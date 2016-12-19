@@ -4,6 +4,7 @@
     text-align: center;
     padding: 25vw 5% 2vw;
     position: relative;
+    color: $color-brand1;
     z-index: 1;
     transition: height $animation_default;
 
@@ -44,7 +45,6 @@
 
     h1 {
 
-        color: $color-brand1;
         font-size: 15vw;
         line-height: 17vw;
         font-family: $font_heading;
@@ -54,8 +54,8 @@
 
         @include respond-to(desktop) {
             top: -5vh;
-            font-size: 20vh;
-            line-height: 22vh;
+            font-size: 15vh;
+            line-height: 18vh;
             margin: 0;
         }
     }
@@ -101,8 +101,10 @@
 .jumbo-home {
     padding: 8vw 5% 2vw;
 
+
     @include respond-to(desktop) {
         padding: 5vh 15% 8vh;
+        height: 70vh;
     }
 
     h1 {
@@ -151,6 +153,9 @@
         float: none;
         box-shadow: 1vw 0 0 $color_brand2,
                         -1vw 0 0 $color_brand2;
+        .red {
+            color: $color_brand3;
+        }
 
         @include respond-to(desktop) {
             left: 1vh;
@@ -194,5 +199,10 @@
         &:hover {
             background-color: $color_brand1;
         }
+    }
+
+    ::selection {
+        background-color: $color_brand1 !important;
+        color: $color_brand2 !important;
     }
 }

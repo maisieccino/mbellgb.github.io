@@ -40,6 +40,10 @@ li {
         padding-right: 0.7rem;
         color: $color_brand2;
     }
+
+    & > p {
+        display: inline;
+    }
 }
 
 *:not(.socials):not(.perspective-nav) > a:not(.button) {
