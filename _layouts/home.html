@@ -2,26 +2,33 @@
 layout: default
 ---
 
-<div class="jumbo" data-img="/assets/img/london.jpg">
-    <h1>Matt Bell</h1>
-    <p>Computer Science Student, London</p>
+<div class="jumbo jumbo-home">
+    <h1>Do things differently<span class="red">.</span></h1>
+    <h2>Matt Bell, London</h2>
+    <hr />
+    <div id="entry-button" class="jumbo-button">Hey there.</div>
 </div>
-
+<div class="socials">
+    <a data-tooltip="@mbell_gb" href="//twitter.com/mbell_gb"><i class="fa fa-twitter"></i></a>
+    <a data-tooltip="mbellgb" href="//github.com/mbellgb"><i class="fa fa-github"></i></a>
+    <a data-tooltip="mbell_gb" href="//instagram.com/mbell_gb"><i class="fa fa-instagram"></i></a>
+    <a data-tooltip="mbellcs" href="https://uk.linkedin.com/in/mbellcs"><i class="fa fa-linkedin"></i></a>
+    <a data-tooltip="Blog" href="//blog.mbell.me"><i class="fa fa-pencil-square-o"></i></a>
+</div>
 <div class="main">
+
     {{ content }}
-    <h1>Latest Projects</h1>
+
+    <h1>I've made...</h1>
     <div class="cards-3">
         {% assign projects = site.projects | limit: 3 %}
         {% for p in projects %}
-            <div class="card">
-                <h3>{{ p.title }}</h3>
-                <p>{{ p.description }}</p>
-                <a class="button" href="{{ p.url }}">Learn More</a>
-            </div>
+            {% include project_card.html p=p %}
         {% endfor %}
-    </div>
-
-    <a class="button" href="https://github.com/mbellgb"><i class="fa fa-github"></i> GitHub</a>
-    <a class="button" href="https://twitter.com/mbell_gb"><i class="fa fa-twitter"></i> Twitter</a>
-    <a class="button" href="https://medium.com/@mbellgb"><i class="fa fa-medium"></i> Medium</a>
+        <a class="button" href="/projects.html">View more...</a>
+    </div><!-- main content -->
 </div>
+
+<footer>
+    <p>Matthew Bell</p>
+</footer>

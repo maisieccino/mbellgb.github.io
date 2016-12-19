@@ -1,32 +1,30 @@
 <!doctype html>
 <html>
+
 <head>
-    <title>
-        {% if page.title and page.title != "Home" %}
-            {{ page.title }} -
-        {% endif %}
-        {% if event_category_result %}
-            {{ event_category_label_result }} -
-        {% endif %}
-        {{ site.title }}
-    </title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="https://use.fontawesome.com/b0b0e3b980.js"></script>
-
-    <link rel="stylesheet" href="{{ "/assets/bower_components/normalize-css/normalize.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+    <meta charset="utf-8" />
+    <title>Matt Bell</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:600,800|Itim|Space+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 
 <body>
+    <div class="menu-button">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
     {% include nav.html %}
-    {{ content }}
 
-    {% include footer.html %}
+    <div class="container">
+        {{ content }}
+    </div><!-- div container -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ "/assets/all.js" | prepend: site.baseurl }}"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="/assets/all.js"></script>
 </body>
+
 </html>

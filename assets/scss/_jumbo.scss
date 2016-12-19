@@ -1,0 +1,198 @@
+.jumbo {
+    background-color: $color_brand3;
+    // height: 83vh;
+    text-align: center;
+    padding: 25vw 5% 2vw;
+    position: relative;
+    z-index: 1;
+    transition: height $animation_default;
+
+    @include respond-to(desktop) {
+        padding: 15vh 15% 5vh;
+    }
+
+    hr {
+        width: 100%;
+        margin: 0;
+        height: 1vw;
+        border: none;
+        background-color: $color_brand1;
+        @include respond-to(desktop) {
+            height: 1vh;
+            top: -5vh;
+        }
+    }
+    &:after {
+        background: inherit;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 50vh;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        transform: skewY(-1.5deg);
+        transform-origin: 100%;
+        z-index: -1;
+        background-image: none;
+    }
+
+    * {
+        position: relative;
+    }
+
+    h1 {
+
+        color: $color-brand1;
+        font-size: 15vw;
+        line-height: 17vw;
+        font-family: $font_heading;
+        font-weight: 800;
+        text-align: left;
+        margin: 10vw 0 2vw 0;
+
+        @include respond-to(desktop) {
+            top: -5vh;
+            font-size: 20vh;
+            line-height: 22vh;
+            margin: 0;
+        }
+    }
+
+    h2 {
+        @extend h1;
+        font-size: 5vw;
+        line-height: 6vw;
+        text-align: left;
+
+        @include respond-to(desktop) {
+            font-size: 5vh;
+            line-height: 6vh;
+        }
+    }
+
+    .jumbo-button {
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        margin: 5vw auto;
+        font-size: 1.25rem;
+        font-family: $font_body;
+        font-weight: bold;
+        cursor:  pointer;
+        border: 0.25rem $color_brand1 solid;
+        color: $color-brand1;
+        transition: background-color $animation_default,
+                    color $animation_default;
+
+        @include respond-to(desktop) {
+            font-size: 2.5rem;
+            margin: 2vh auto;
+            top: -3vh;
+        }
+
+        &:hover {
+            background-color: $color_brand1;
+            color: $color_brand3;
+        }
+    }
+}
+
+.jumbo-home {
+    padding: 8vw 5% 2vw;
+
+    @include respond-to(desktop) {
+        padding: 5vh 15% 8vh;
+    }
+
+    h1 {
+        word-spacing: 95vw;
+    }
+
+    h2 {
+        text-align: right;
+        word-spacing: normal;
+        top: -7vw;
+        @include respond-to(desktop) {
+            top: -5vh;
+        }
+    }
+
+    &:after {
+        opacity: 1;
+    }
+}
+
+.jumbo:not(.jumbo-home) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding-bottom: 3rem;
+
+    background-size: cover;
+    background-position: center;
+
+    & > div {
+        text-align: left;
+    }
+
+    h1,h2,a {
+        background-color: $color_brand2;
+        display: inline;
+        position:relative;
+        padding-left: 0;
+    }
+
+    h1 {
+        left: 1vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        float: none;
+        box-shadow: 1vw 0 0 $color_brand2,
+                        -1vw 0 0 $color_brand2;
+
+        @include respond-to(desktop) {
+            left: 1vh;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            box-shadow: 1vh 0 0 $color_brand2,
+                            -1vh 0 0 $color_brand2;
+            }
+    }
+
+    h2 {
+        left: 0.5vw;
+        float: none;
+        top: 1vw;
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+        box-shadow: 0.5vw 0 0 $color_brand2,
+                        -0.5vw 0 0 $color_brand2;
+
+        @include respond-to(desktop) {
+            left: 0.5vh;
+            top: -3vh;
+            padding-top: 0.5vh;
+            padding-bottom: 0.5vh;
+            box-shadow: 0.5vh 0 0 $color_brand2,
+                            -0.5vh 0 0 $color_brand2;
+            }
+    }
+
+    a.button {
+        line-height: normal;
+        font-size: 5vw;
+        line-height: 6vw;
+        top: 2vw;
+
+        @include respond-to(desktop) {
+            font-size: 5vh;
+            line-height: 6vh;
+            top: -1vh;
+        }
+        &:hover {
+            background-color: $color_brand1;
+        }
+    }
+}
