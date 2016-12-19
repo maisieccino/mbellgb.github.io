@@ -14,6 +14,7 @@ layout: default
     <a data-tooltip="mbell_gb" href="//instagram.com/mbell_gb"><i class="fa fa-instagram"></i></a>
     <a data-tooltip="mbellcs" href="https://uk.linkedin.com/in/mbellcs"><i class="fa fa-linkedin"></i></a>
     <a data-tooltip="Blog" href="//blog.mbell.me"><i class="fa fa-pencil-square-o"></i></a>
+    <a data-tooltip="@mbell_gb" href="//medium.com/@mbell_gb"><i class="fa fa-medium"></i></a>
 </div>
 <div class="main">
 
@@ -21,12 +22,12 @@ layout: default
 
     <h1>I've made...</h1>
     <div class="cards-3">
-        {% assign projects = site.projects | limit: 3 %}
-        {% for p in projects %}
+        {% assign projects = site.projects %}
+        {% for p in projects limit: 3%}
             {% include project_card.html p=p %}
         {% endfor %}
-        <a class="button" href="/projects">View more...</a>
     </div><!-- main content -->
+    <a class="button" href="/projects">View more...</a>
 </div>
 
 <footer>
