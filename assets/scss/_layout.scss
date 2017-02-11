@@ -113,7 +113,7 @@ body.active .container {
     text-align: center;
     height: 12vw;
     line-height: 12vw;
-    font-size: 10vw;
+    font-size: 7vw;
     @include respond-to(desktop) {
         padding: 8vh 0;
         height: 8vh;
@@ -129,7 +129,7 @@ body.active .container {
             position: absolute;
             bottom: calc(100% + 0.5rem);
             height: 2.5rem;
-            left: -0.5rem;
+            left: 0rem;
             line-height: 2.5rem;
             font-size: 2.5rem;
             background-color: $color_brand2;
@@ -153,9 +153,12 @@ body.active .container {
             content: '';
             bottom: calc(100% - 0.5rem);
             position: absolute;
-            left: 1rem;
             visibility: hidden;
             transition: visibility 0s, opacity $animation_default;
+            left: 0.5rem;
+            @include respond-to(desktop) {
+                left: 2rem;
+            }
         }
         &:hover:after,
         &:hover:before {
@@ -208,7 +211,7 @@ body.active .container {
 
         .card {
             @include respond-to(desktop) {
-                width: calc((100% / #{$i}) - (0.5rem * #{$i}));
+                width: calc((100% / #{$i}) - (0.75rem * #{$i}));
             }
         }
     }
@@ -217,7 +220,7 @@ body.active .container {
 .card {
     background-color: lighten($color_brand2, 5);
     color: $color_brand1;
-    padding: 0.5rem;
+    padding: 0.75rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -261,16 +264,27 @@ body.active .container {
     background-size: cover;
     background-position: center !important;
     background: rgba($color_brand1, 0.3);
-    width: calc(100% + 1rem);
+    width: calc(100% + 1.5rem);
     height: 20rem;
-    left: -0.5rem;
-    top: -0.5rem;
+    left: -0.75rem;
+    top: -0.75rem;
+    z-index: 0;
+
+    &:after {
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 1;
+        background: linear-gradient(45deg, $color_brand2, $color_brand1);
+        content: '';
+        opacity: 0.6;
+    }
 }
 
 footer {
     @extend .main;
     background-color: $color_brand1;
-    color: $color_brand2;
+    color: $color_brand3;
     text-align: center;
 
     &:before {

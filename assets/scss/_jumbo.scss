@@ -126,11 +126,16 @@
 }
 
 .jumbo:not(.jumbo-home) {
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-    padding-bottom: 3rem;
+    padding-bottom: 8vh;
+
+    @include respond-to(desktop) {
+        padding-bottom: 5vw;
+    }
 
     background-size: cover;
     background-position: center;
@@ -141,7 +146,7 @@
     }
 
     h1,h2,a {
-        background-color: $color_brand2;
+        background-color: $color_brand3;
         display: inline;
         position:relative;
         padding-left: 0;
@@ -152,18 +157,18 @@
         padding-top: 1vw;
         padding-bottom: 1vw;
         float: none;
-        box-shadow: 1vw 0 0 $color_brand2,
-                        -1vw 0 0 $color_brand2;
+        box-shadow: 1vw 0 0 $color_brand3,
+                        -1vw 0 0 $color_brand3;
         .red {
-            color: $color_brand3;
+            color: $color_brand2;
         }
 
         @include respond-to(desktop) {
             left: 1vh;
             padding-top: 1vh;
             padding-bottom: 1vh;
-            box-shadow: 1vh 0 0 $color_brand2,
-                            -1vh 0 0 $color_brand2;
+            box-shadow: 1vh 0 0 $color_brand3,
+                            -1vh 0 0 $color_brand3;
             }
     }
 
@@ -173,16 +178,16 @@
         top: 1vw;
         padding-top: 0.5vw;
         padding-bottom: 0.5vw;
-        box-shadow: 0.5vw 0 0 $color_brand2,
-                        -0.5vw 0 0 $color_brand2;
+        box-shadow: 0.5vw 0 0 $color_brand3,
+                        -0.5vw 0 0 $color_brand3;
 
         @include respond-to(desktop) {
             left: 0.5vh;
             top: -3vh;
             padding-top: 0.5vh;
             padding-bottom: 0.5vh;
-            box-shadow: 0.5vh 0 0 $color_brand2,
-                            -0.5vh 0 0 $color_brand2;
+            box-shadow: 0.5vh 0 0 $color_brand3,
+                            -0.5vh 0 0 $color_brand3;
             }
     }
 
@@ -190,21 +195,19 @@
         line-height: normal;
         font-size: 5vw;
         line-height: 6vw;
-        top: 2vw;
+        top: 1rem;
+        background-color: $color_brand2;
+        color: $color_brand3;
 
         @include respond-to(desktop) {
             font-size: 5vh;
             line-height: 6vh;
-            top: -1vh;
+            top: -0.25vh;
+            border-width: 0.5rem !important;
         }
         &:hover {
             background-color: $color_brand1;
         }
-    }
-
-    ::selection {
-        background-color: $color_brand1 !important;
-        color: $color_brand2 !important;
     }
 
     &:after {
@@ -214,9 +217,9 @@
         width: 100%;
         height: 100%;
         z-index: 0;
-        background-color: rgba($color_brand3,0.5);
+        background: linear-gradient(45deg, $color_brand1, $color_brand2);
         transform: none;
         content: '';
-        opacity: 1;
+        opacity: 0.7;
     }
 }

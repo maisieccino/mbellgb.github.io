@@ -2,6 +2,10 @@ $(function() {
     FastClick.attach(document.body);
 });
 
+$.fn.exists = function() {
+    return this.length !== 0;
+}
+
 // $('.jumbo').each(function () {
 //     var imgUrl = $(this).data('img');
 //     if (imgUrl) {
@@ -13,7 +17,6 @@ $(function() {
 
 // This fixes the weird page jumping thing on mobile browsers.
 // http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome
-var jumbo = $('.jumbo-home');
 jQuery(window).resize("resizeBackground");
 var resizeFactor = function() {
     var width = jquery(window).width;
@@ -27,7 +30,10 @@ var resizeFactor = function() {
     else return 0.8;
 };
 function resizeBackground() {
-    jumbo.height(resizeFactor * jQuery(window).height());
+    var jumbo = $('.jumbo-home');
+    if (jumbo.exists()) {
+        jumbo.height(resizeFactor * jQuery(window).height());
+    }
 }
 resizeBackground();
 

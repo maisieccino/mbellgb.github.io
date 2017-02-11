@@ -14,8 +14,8 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 5rem;
-    height: 5rem;
+    width: 20vw;
+    height: 20vw;
     background-color: rgba(#222, 0.5);
     z-index: 3;
     transition: background-color 0.25s ease-in-out;
@@ -56,5 +56,10 @@
     &:hover {
         background-color: $color_brand2;
         cursor: pointer;
+    }
+
+    @include respond-to(desktop) {
+        width: 10vh;
+        height: 10vh;
     }
 }
