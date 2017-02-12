@@ -287,6 +287,10 @@ footer {
     color: $color_brand3;
     text-align: center;
 
+    a:before {
+        background-color: $color_brand2 !important;
+    }
+
     &:before {
         display: none;
     }
