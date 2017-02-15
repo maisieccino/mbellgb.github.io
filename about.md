@@ -16,13 +16,23 @@ I wrote some thoughts on my first year of computer science, which you can read o
 I served as part of the [TechSoc](http://techsoc.io/) committee between March and October 2016. I led the marketing team and helped with some of the organisation for [Porticode](http://porticode.io), TechSoc's own hackathon.
 
 # Hackathons
-I aim to go to as many hackathons as I can- they're an awesome way of trying out new tech and meeting new people with similar interests! A selection of my submitted projects are on my [Devpost profile](https://devpost.com/mbell). Here's a definitive list of what I've been up to
+I aim to go to as many hackathons as I can-- they're an awesome way of trying out new tech and meeting new people with similar interests! A selection of my submitted projects are on my [Devpost profile](https://devpost.com/mbell). Here's a definitive list of what I've been up to.
+
+## 2017
+
+* **As Yet Untitled Hackathon (Upcoming)** -- TBA in August.
+
+* **HackUPC Winter 17 (Upcoming)** -- Barcelona, Spain. Watch this space!
+
+* **IC Hack 17** -- London, England. Behind-the-scenes volunteer who assisted with checkin, crowd control, and hacker quality of life (distributing food was a big part of this!)
+
+* **Hack Cambridge: Recurse** -- Cambridge, England. Built a crowd-based game using Unity and Pusher. [Read more](https://medium.com/@mbell_gb/hack-cambridge-a-lesson-in-recursion-d1d11aae4b6c)
 
 ## 2016
 
 * **Porticode** -- London, England. Mentored, helped out at workshops and assisted hackers over the weekend.
 
-* **Junction** -- Helsinki, Finland. Created an Internet-connected letterbox. [Read more](https://devpost.com/software/junction2016-7upynt)
+* **Junction** -- Helsinki, Finland. Created an Internet-connected letterbox. [Read more](https://medium.com/@mbell_gb/my-weekend-at-junction-2016-23fee7e211e8)
 
 * **LauzHack** -- Lausanne, Switzerland. Supported the hackathon by volunteering and mentoring over the weekend.
 
@@ -32,7 +42,7 @@ I aim to go to as many hackathons as I can- they're an awesome way of trying out
 
 * **HackLondon** -- London, UK. Git++, a motion controller for Git. [Read more]({{ "/projects/gitpp/" | prepend: site.baseurl }})
 
-* **HackCambridge** -- Cambridge, UK. LingualMingle, a chat app for penpals.
+* **Hack Cambridge** -- Cambridge, UK. LingualMingle, a chat app for penpals.
 
 ## 2015
 
