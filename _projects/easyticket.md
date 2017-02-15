@@ -20,7 +20,7 @@ While working on the [TechSoc](http://techsoc.io) committee, I noticed that the 
 * (Possibly) a mobile app to allow for fast checkin for both attendees and organisers.
 
 # Progress So Far
-So far, I've been busy working on the modelling side of things as well as setting up a server Node.JS. I've been somewhat hindered by life and university work, so my aim right now is to set up a framework to help others contribute to the platform.
+So far, I've been busy working on the modelling side of things as well as setting up a server with Node.JS. I've been somewhat hindered by life and university work, so my aim right now is to set up a framework to help others contribute to the platform.
 
 Honestly right now it doesn't feel like I've gone about creating the project in the right way, so I'm going to try to seek advice from people who have had experience setting up an open source project and learn from them. If you have any tips or want to help, I'd love to hear from you! Either use my contact information at the bottom of this page, or create an issue in the [GitHub repository](https://github.com/mbellgb/easyticket).
 
