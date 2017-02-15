@@ -3,7 +3,7 @@ body {
     font-family: $font_body;
     font-weight: 500;
     @include respond-to(tablet) {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 }
 p,li {

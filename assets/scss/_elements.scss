@@ -58,8 +58,8 @@
         cursor: pointer;
     }
 
-    @include respond-to(desktop) {
-        width: 10vh;
-        height: 10vh;
+    @include respond-to(mobilarge) {
+        width: 8vh;
+        height: 8vh;
     }
 }

@@ -7,7 +7,7 @@
 
 body { font-size: 1.5rem; font-family: "Signika", sans-serif; font-weight: 500; }
 
-@media (min-width: 750px) { body { font-size: 2rem; } }
+@media (min-width: 750px) { body { font-size: 1.75rem; } }
 
 p, li { line-height: 2.25rem; }
 
@@ -195,11 +195,11 @@ body.active .container::after { opacity: 1; height: 101%; -webkit-transition: op
 
 .card-img { position: relative; background-size: cover; background-position: center !important; background: rgba(23, 28, 68, 0.3); width: calc(100% + 1.5rem); height: 20rem; left: -0.75rem; top: -0.75rem; z-index: 0; }
 
-.card-img:after { width: 100%; height: 100%; display: block; z-index: 1; background: -webkit-linear-gradient(45deg, #ED254E, #171C44); background: linear-gradient(45deg, #ED254E, #171C44); content: ''; opacity: 0.6; }
+.card-img:after { width: 100%; height: 100%; display: block; z-index: 1; background: -webkit-linear-gradient(45deg, #ED254E, #171C44); background: linear-gradient(45deg, #ED254E, #171C44); content: ''; opacity: 0.7; }
 
 footer { background-color: #171C44; color: #F9DC5C; text-align: center; }
 
-footer a:before { background-color: #ED254E !important; }
+footer a:not(.social):before { background-color: #ED254E !important; }
 
 footer:before { display: none; }
 
@@ -235,6 +235,6 @@ footer ::selection { color: #171C44; }
 
 .menu-button:hover { background-color: #ED254E; cursor: pointer; }
 
-@media (min-width: 1200px), (orientation: landscape) { .menu-button { width: 10vh; height: 10vh; } }
+@media (min-width: 480px) { .menu-button { width: 8vh; height: 8vh; } }
 
 /*# sourceMappingURL=main.css.map */
