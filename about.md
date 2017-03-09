@@ -22,15 +22,17 @@ I aim to go to as many hackathons as I can-- they're an awesome way of trying ou
 
 * **As Yet Untitled Hackathon (Upcoming)** -- TBA in August.
 
-* **HackUPC Winter 17 (Upcoming)** -- Barcelona, Spain. Watch this space!
+* **StudentHack V (Upcoming)** -- Manchester, UK.
+
+* **HackUPC Winter 17** -- Barcelona, Spain. Created an Alexa skill for controlling your browser. [Read more]({{ "/projects/chromelexa/" | prepend: site.baseurl }})
 
 * **IC Hack 17** -- London, England. Behind-the-scenes volunteer who assisted with checkin, crowd control, and hacker quality of life (distributing food was a big part of this!)
 
-* **Hack Cambridge: Recurse** -- Cambridge, England. Built a crowd-based game using Unity and Pusher. [Read more](https://medium.com/@mbell_gb/hack-cambridge-a-lesson-in-recursion-d1d11aae4b6c)
+* **Hack Cambridge: Recurse** -- Cambridge, UK. Built a crowd-based game using Unity and Pusher. [Read more](https://medium.com/@mbell_gb/hack-cambridge-a-lesson-in-recursion-d1d11aae4b6c)
 
 ## 2016
 
-* **Porticode** -- London, England. Mentored, helped out at workshops and assisted hackers over the weekend.
+* **Porticode** -- London, UK. Mentored, helped out at workshops and assisted hackers over the weekend.
 
 * **Junction** -- Helsinki, Finland. Created an Internet-connected letterbox. [Read more](https://medium.com/@mbell_gb/my-weekend-at-junction-2016-23fee7e211e8)
 
