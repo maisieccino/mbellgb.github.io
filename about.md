@@ -15,6 +15,16 @@ I wrote some thoughts on my first year of computer science, which you can read o
 ## UCLU TechSoc
 I served as part of the [TechSoc](http://techsoc.io/) committee between March and October 2016. I led the marketing team and helped with some of the organisation for [Porticode](http://porticode.io), TechSoc's own hackathon.
 
+# Experience
+
+You can find out about my work history and experience on [LinkedIn](https://www.linkedin.com/in/mbellcs/).
+
+## Developer at TBA
+_June to September 2017_
+
+## Internet Services Developer at Netcraft
+_June to September 2016_
+
 # Hackathons
 I aim to go to as many hackathons as I can-- they're an awesome way of trying out new tech and meeting new people with similar interests! A selection of my submitted projects are on my [Devpost profile](https://devpost.com/mbell). Here's a definitive list of what I've been up to.
 
