@@ -32,7 +32,11 @@ I aim to go to as many hackathons as I can-- they're an awesome way of trying ou
 
 * **As Yet Untitled Hackathon (Upcoming)** -- TBA in August.
 
-* **StudentHack V (Upcoming)** -- Manchester, UK.
+* **MLH Prime EU Regional** -- London, UK. Night shift volunteer for MLH's own hackathon. Duties mainly included running the hardware lab and assisting hackers with issues they had over the course of the night.
+
+* **HackCity 2017** -- London, UK. Night shift volunteer for the first hackathon at City, University Of London. Duties included distributing food and collecting waste, as well as some mentoring.
+
+* **StudentHack V** -- Manchester, UK. Used an IOT coffee mug to display Transport For London service updates. [Read more]({{ "/projects/brewtube/" | prepend: site.baseurl }})
 
 * **HackUPC Winter 17** -- Barcelona, Spain. Created an Alexa skill for controlling your browser. [Read more]({{ "/projects/chromelexa/" | prepend: site.baseurl }})
 
