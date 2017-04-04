@@ -19,7 +19,10 @@ I served as part of the [TechSoc](http://techsoc.io/) committee between March an
 
 You can find out about my work history and experience on [LinkedIn](https://www.linkedin.com/in/mbellcs/).
 
-## Developer at TBA
+## Developer at Symbility Intersect
+
+*Toronto, ON*
+
 _June to September 2017_
 
 ## Internet Services Developer at Netcraft
