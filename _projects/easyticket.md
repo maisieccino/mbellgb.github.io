@@ -1,6 +1,6 @@
 ---
 title: Openticket
-project_url: https://github.com/open-ticket
+project_url: https://org.openticket.tech/
 description: A dead simple ticketing platform ready to host on your own system.
 img: /assets/img/openticket.jpg
 ---
