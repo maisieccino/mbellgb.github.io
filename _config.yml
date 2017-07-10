@@ -42,7 +42,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-
+  - files/*.tex
 defaults:
   -
     scope:

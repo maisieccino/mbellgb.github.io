@@ -29,8 +29,8 @@ You can find out about my work history and experience on
 ## Internet Services Developer (Intern) at [Netcraft](https://netcraft.com/)
 _June to September 2016_
 
-## Backend Engineer Intern at [Pip](https://www.pip.group/) 
-*June to September 2017*
+## Backend Engineer Intern at [Pip App](https://www.pip.group/)
+*June to July 2017*
 
 # Hackathons
 I aim to go to as many hackathons as I can -- they're an awesome way of trying

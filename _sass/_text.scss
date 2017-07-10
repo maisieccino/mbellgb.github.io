@@ -1,15 +1,15 @@
 body {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: $font_body;
     font-weight: 500;
     @include respond-to(tablet) {
-        font-size: 1.75rem;
+        font-size: 1.55rem;
     }
 }
 p,li {
-    line-height: 2.25rem;
+    line-height: 1.95rem;
     @include respond-to(tablet) {
-        line-height: 3rem;
+        line-height: 2.2rem;
     }
 }
 h1,h2,h3,h4,h5,h6 {

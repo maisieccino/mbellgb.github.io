@@ -1,0 +1,213 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage{mdwlist}
+\usepackage{fontspec}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{fontawesome}
+\usepackage{titlesec}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\setmainfont{Yantramanav}
+\setsansfont{Product Sans}
+\titleformat*{\subsection}{\sffamily\Large}
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+% \includegraphics[scale=0.2]{./face2.jpg}\\
+{\Huge \sffamily{Matt Bell}}\\
+
+
+% \ \ Student at UCL  \textbullet
+% \ \ Flat 6 Holmdale Mansions\ \ \textbullet
+% \ \ London NW6 1BG
+\ \ \faicon{github} mbellgb\ \ \textbullet
+\ \ \faicon{medium} @mbell\_gb\ \ \textbullet
+\ \ \faicon{twitter} @mbell\_gb\ \ \textbullet
+\\
+% +44 7827 638207\ \ \textbullet
+\ \ matt@mbell.me\ \ \textbullet
+\ \ https://mbell.me/
+\end{center}
+
+
+\hrule
+\vspace{-1.2em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{University College London}}
+		{\textbf{Year 2 of 3, first-class average grade}}\\
+	\headerrow
+		{\emph{BSc Computer Science}}
+		{\emph{Sep 2015 -- 2018 (expected)}}
+	% \begin{itemize*}
+	% 	\item Averaged a first-class grade across my first year modules.
+	% \end{itemize*}
+
+	% \item
+	% \headerrow
+	% 	{\textbf{Peter Symonds College}}
+	% 	{\textbf{Winchester, Hampshire}}
+	% \\
+	% \headerrow
+	% 	{}
+	% 	{\emph{Sep 2013 -- Jun 2015}}
+	% \begin{itemize*}
+	% 	\item A-levels: Mathematics, A*; Further Mathematics, A*; Computing, A*.
+	% 	\item AS-level: French, A.
+	% 	\item Second year project to create a class management system for a French tutor using Delphi.
+	% \end{itemize*}
+
+\end{itemize}
+
+
+ \vspace{-0.4em}
+ \hrule
+ \vspace{-1.2em}
+ \subsection*{Experience}
+
+ \begin{itemize}
+ 	\parskip=0.1em
+
+ 	\item
+ 	\headerrow
+ 		{\textbf{Netcraft}}
+ 		{\textbf{Bath, Somerset}}
+ 	\\
+ 	\headerrow
+ 		{\emph{Internet Services Developer (Internship)}}
+ 		{\emph{Jun 2016 -- Sep 2016}}
+ 	\begin{itemize*}
+ 		\item Maintained production servers and supported devops work, as well as working as the primary on-call systems admin at times.
+		\item Develop new features for the company's systems including package version archiving and input validation for the fraud detection systems.
+		\item Helped to set up clients on the internal systems and write config files for them.
+ 	\end{itemize*}
+
+% 	\item
+% 	\headerrow
+% 		{\textbf{Hornet Services Sailing Club}}
+% 		{\textbf{Gosport, Hampshire}}
+% 	\\
+% 	\headerrow
+% 		{\emph{Galley Staff Member}}
+% 		{\emph{Apr 2014 -- Sep 2015}}
+% 	\begin{itemize*}
+% 		\item Tasks involved working in the clubhouse galley in a small team washing utensils and pots, preparing dishes and serving food to our guests.
+% 		\item Worked under a zero-hour contract and would often be called in for functions and to cover regular staff.
+% 		\item Learnt how to work to a high standard in an efficient manner, and to handle multiple tasks at once.
+% 		\item We served a large variety of customers, from small children to retired servicemen who frequented the clubhouse.
+% 	\end{itemize*}
+
+ \end{itemize}
+
+\vspace{-0.4em}
+\hrule
+\vspace{-1.2em}
+
+\subsection*{Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages:]
+	% JavaScript, C, Python, Perl, Rubya
+    Expert: JavaScript\\
+    Working experience: Perl, Python\\
+    Intermediate: C, Ruby\\
+    Limited experience: Java, Go
+	\item[Web Technologies:]
+	Experience with popular web technologies such as Express.JS, Ruby On Rails, Socket.io and Django
+	\item[DevOps:]
+	Experience using database systems (SQL and NoSQL), web server software (Nginx and Apache), UNIX shells and continuous integration systems (e.g. Travis)
+	% I maintain my own virtual web server and have had experience setting up and running servers. I also have experience with web server software (Nginx \& Apache), database systems (PostgreSQL /MariaDB /MongoDB) and I am proficient with using UNIX shells.
+\end{description*}
+\end{indentsection}
+
+\vspace{-0.4em}
+\hrule
+\vspace{-1.2em}
+\subsection*{Achievements}
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+    \item[Facebook Capture The Flag Competition (Nov 2015):] Worked on systems-level problems; my team took second place.
+	\item[HackLondon II (Feb 2016):] Created a plugin for a text editor that allows gesture control, which won the GitHub developer prize.
+\end{description*}
+\end{indentsection}
+
+\vspace{-0.4em}
+\hrule
+\vspace{-1.2em}
+\subsection*{Volunteering and Hackathons}
+\begin{indentsection}{\parindent}
+\begin{description*}
+	\item[UCLU Technology Society:] Was a committee member from March to October 2016, and a member of the organising team for the CS50 Hackathon.
+	\item[Lauzhack 2016:] Travelled to Lausanne, Switzerland to volunteer/mentor at EPFL's hackathon. I helped with logistics and helped to fix attendees' projects.
+	\item[Porticode 2016:] Mentored at UCL's beginner-focussed hackathon, helping specifically with Node.js and Git.
+	\item[Hack The North 2016:] Travelled to Waterloo, Canada to hack with people from all over the world.
+\end{description*}
+\end{indentsection}
+\vspace{-0.4em}
+\hrule
+
+\vspace{-1.2em}
+\subsection*{Projects}
+\begin{indentsection}{\parindent}
+	\hyphenpenalty=1000
+	\begin{description*}
+		\item[Openticket:]
+		An open source events platform written in Go. I'm focussing mainly on the server-side aspect so that other developers have the freedom to implement their own interfaces.
+		\item[Graduate Recruitment Portal:]
+		First-year university project created for Atos. It's a web app designed to give tasks to candidates for jobs, as a way of assessing them.
+		\item[Git++:]
+		A plugin for the Atom text editor that uses the Leap Motion peripheral to enable gesture control for Git commits.
+		\item[Mentor Matching App:]
+		Second year group project. An app that automatically pairs mentors with mentees given their preferences and interests. I worked as the sole backend API developer.
+		\item[CoffeeSchool:]
+		An online Javascript course aimed at 14-17 year old students, that walks the user through making a game. I made a custom script to enable tests to be run on the code that the user writes.
+	\end{description*}
+	A selection of projects (plus source code) is available at https://mbell.me/projects.
+\end{indentsection}
+
+\end{document}

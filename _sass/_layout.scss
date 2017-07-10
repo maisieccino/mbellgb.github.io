@@ -23,6 +23,7 @@ body.active {
     align-items: stretch;
     // opacity: 0;
     transition: all 0.25s ease-in-out;
+    font-family: $font_heading;
 
     ::selection {
         background-color: $color_brand1;
@@ -132,8 +133,8 @@ body.active .container {
             left: 0rem;
             line-height: 2.5rem;
             font-size: 2.5rem;
-            background-color: $color_brand2;
-            color: $color_brand3;
+            background: linear-gradient(45deg,$color_brand2,$color_brand5);
+            color: $color_brand4;
             padding: 1rem;
             border-radius: 0.5rem;
             z-index: 2;
@@ -218,7 +219,7 @@ body.active .container {
 }
 
 .card {
-    background-color: lighten($color_brand2, 5);
+    background-color: lighten($color_brand5, 5);
     color: $color_brand1;
     padding: 0.75rem;
     overflow: hidden;
@@ -275,7 +276,7 @@ body.active .container {
         height: 100%;
         display: block;
         z-index: 1;
-        background: linear-gradient(45deg, $color_brand2, $color_brand1);
+        background: linear-gradient(45deg, $color_brand5, $color_brand2);
         content: '';
         opacity: 0.7;
     }
