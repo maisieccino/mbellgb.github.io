@@ -24,6 +24,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+paginate: 5
+paginate_path: "/blog/page/:num/"
+
 collections:
   projects:
     output: true
@@ -34,15 +37,36 @@ collections:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input:          GFM
+  # https://github.com/jekyll/jekyll/pull/4090
+  syntax_highlighter: rouge
+
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # span, block element options fall back to global
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 theme: minima
+highlighter: rouge
 gems:
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-paginate
+  - rouge
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
   - files/*.tex
+  - node_modules
+
 defaults:
   -
     scope:
@@ -50,3 +74,10 @@ defaults:
       type: projects
     values:
       layout: page
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      lauout: post
+      is_post: true

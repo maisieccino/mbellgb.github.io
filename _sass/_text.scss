@@ -12,6 +12,18 @@ p,li {
         line-height: 2.2rem;
     }
 }
+pre,code {
+    font-family: $font-code;
+    font-size: 1.3rem;
+}
+figure.highlight {
+    padding: 0.75rem;
+    margin: 0;
+}
+*:not(pre) > code {
+    background-color: darken($color-brand4, 10);
+    padding: 0.1rem;
+}
 h1,h2,h3,h4,h5,h6 {
     font-family: $font_heading;
     font-weight: 600;

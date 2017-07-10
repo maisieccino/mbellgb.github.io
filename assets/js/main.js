@@ -38,9 +38,11 @@ function resizeBackground() {
 resizeBackground();
 
 // Red dots on titles
-var jumboTitle = $('.jumbo h1');
-jumboTitle.html(jumboTitle.html().replace(/\.$/,''));
-jumboTitle.html(jumboTitle.html() + '<span class="red">.</span>');
+var jumboTitle = $('.jumbo:not(.no-dot) h1');
+if ($(jumboTitle).length) {
+    jumboTitle.html(jumboTitle.html().replace(/\.$/,''));
+    jumboTitle.html(jumboTitle.html() + '<span class="red">.</span>');
+}
 
 $('#entry-button').click(function() {
     console.log("ouch");
