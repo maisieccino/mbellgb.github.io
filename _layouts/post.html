@@ -15,6 +15,9 @@ layout: default
 </div>
 
 <div class="main post">
+    {% if page.subtitle %}
+        <h3>{{ page.subtitle }}</h3>
+    {% endif %}
     {{ content }}
 
     <hr />
