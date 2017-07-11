@@ -3,13 +3,13 @@ body {
     font-family: $font_body;
     font-weight: 500;
     @include respond-to(tablet) {
-        font-size: 1.55rem;
+        font-size: 1.25rem;
     }
 }
 p,li {
     line-height: 1.95rem;
     @include respond-to(tablet) {
-        line-height: 2.2rem;
+        line-height: 1.7rem;
     }
 }
 pre,code {
@@ -21,7 +21,7 @@ figure.highlight {
     margin: 0;
 }
 *:not(pre) > code {
-    background-color: darken($color-brand4, 10);
+    background-color: rgba($color-brand4, 0.4);
     padding: 0.1rem;
 }
 h1,h2,h3,h4,h5,h6 {
@@ -77,6 +77,16 @@ li {
         &:before{
             height: 100%;
             top: 0
+        }
+    }
+}
+
+.post {
+    p,li {
+        font-family: $font_writing;
+        line-height: 2.35rem;
+        @include respond-to(tablet) {
+            line-height: 1.8rem;
         }
     }
 }

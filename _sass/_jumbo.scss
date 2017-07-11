@@ -8,6 +8,12 @@
     z-index: 1;
     transition: height $animation_default;
 
+    &.post {
+        @include respond-to(desktop) {
+            padding: 15vh 20% 5vh;
+        }
+    }
+
     @include respond-to(desktop) {
         padding: 15vh 15% 5vh;
     }
@@ -53,17 +59,17 @@
         margin: 10vw 0 2vw 0;
 
         @include respond-to(desktop) {
-            top: -5vh;
-            font-size: 15vh;
-            line-height: 18vh;
+            top: -4vh;
+            font-size: 12vh;
+            line-height: 17vh;
             margin: 0;
         }
     }
 
     h2 {
         @extend h1;
-        font-size: 5vw;
-        line-height: 6vw;
+        font-size: 8vw;
+        line-height: 10vw;
         text-align: left;
 
         @include respond-to(desktop) {

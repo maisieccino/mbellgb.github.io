@@ -177,7 +177,7 @@ body.active .container {
     position: relative;
     background-color: $color_brand4;
     width: 90%;
-    padding: 2vw 5%;
+    padding: 2vw 5% 5vw;
     @include respond-to(desktop) {
         padding: 2vw 15%;
         width: 70%;
@@ -194,6 +194,24 @@ body.active .container {
         transform: skewY(1.5deg);
         transform-origin: 100%;
         z-index: -1;
+    }
+    &.post {
+        @include respond-to(desktop) {
+            padding: 2vw 20%;
+            width: 60%;
+            text-align: justify;
+        }
+
+        img {
+            width: 100%;
+            border: $color_brand3 solid 0.25rem;
+        }
+
+        hr {
+            width: 15%;
+            margin: 0;
+            border: $color_brand5 solid 0.5rem;
+        }
     }
 }
 .flex {
@@ -238,7 +256,7 @@ body.active .container {
 
     p {
         margin: 0.1rem 0;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     a.button {

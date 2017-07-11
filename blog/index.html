@@ -2,7 +2,7 @@
 layout: page
 title: Blog
 description: "My blog posts."
-navigation: true
+navigation: false
 order: 3
 ---
 
@@ -16,8 +16,8 @@ order: 3
 {% endfor %}
 
 {% if paginator.previous_page != nil %}
-    <a href="{{ paginator.previous_page_path }}">Next</a>
+<a href="{{ paginator.previous_page_path }}">Next</a>
 {% endif %}
 {% if paginator.next_page != nil %}
-    <a href="{{ paginator.next_page_path }}">Next</a>
+<a href="{{ paginator.next_page_path }}">Next</a>
 {% endif %}
