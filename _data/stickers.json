@@ -6,21 +6,6 @@
       "img": "/assets/img/stickers/inspiron/inspiron.jpg",
       "views": [
         {
-          "name": "Back",
-          "src": "/assets/img/stickers/inspiron/back.jpg",
-          "width": 1422.4,
-          "height": 1066.8,
-          "viewbox": {
-            "width": 1422.40,
-            "height": 1066.80
-          },
-          "stickers": [
-            {
-              "name": "She++"
-            }
-          ]
-        },
-        {
           "name": "Keyboard",
           "src": "/assets/img/stickers/inspiron/keyboard.jpg",
           "width": 1422.4,
