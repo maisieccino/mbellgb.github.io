@@ -1,0 +1,27 @@
+---
+layout: page
+title: Stickers
+navigation: true
+order: 3
+description: "\"Why do you have so many stickers on your laptop?\""
+---
+
+<p><strong>Note:</strong> This page is still a work in progress. More sticker sets will be added in due course!</p>
+<div class="cards-3">
+{% for device in site.data.stickers.devices %}
+<div class="card">
+  <div class="card-img" style="background-image: url('{{ device.img }}');">
+  </div>
+  <h2>{{ device.name }}</h2>
+  <p>{{ device.description }}</p>
+  <p>{{ device.service_start }}</p>
+
+  <p><strong>Views:</strong></p>
+  <div class="button-container">
+  {% for view in device.views %}
+    <a class="button" href="{{ site.baseurl }}/stickers/{{ device.name | slugify }}/{{ view.name | slugify }}">{{ view.name }}</a>
+  {% endfor %}
+  </div>
+</div>
+{% endfor %}
+</div>

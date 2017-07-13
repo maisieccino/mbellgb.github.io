@@ -17,7 +17,7 @@ body.active {
     position: fixed;
     top: 20vh;
     left: -50vw;
-    min-width: 50vw;
+    min-width: 40vw;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -39,12 +39,12 @@ body.active {
         background-color: transparent;
         // text-transform: uppercase;
         text-decoration: none;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.3em;
         font-size: 1.8rem;
         transition: all 0.25s ease-in-out;
 
         @include respond-to(tablet) {
-            font-size: 3rem;
+            font-size: 2rem;
         }
 
         &:hover, &:active {
@@ -201,7 +201,7 @@ body.active .container {
             width: 60%;
         }
 
-        img {
+        img:not(.emoji) {
             width: 100%;
             border: $color_brand3 solid 0.25rem;
         }
@@ -211,8 +211,6 @@ body.active .container {
             margin: 0;
             border: $color_brand5 solid 0.5rem;
         }
-        
-        text-align: justify;
     }
 }
 .flex {
@@ -230,6 +228,7 @@ body.active .container {
         align-items: stretch;
 
         .card {
+          width: 100%;
             @include respond-to(desktop) {
                 width: calc((100% / #{$i}) - (0.75rem * #{$i}));
             }
@@ -258,19 +257,44 @@ body.active .container {
     p {
         margin: 0.1rem 0;
         font-size: 1.2rem;
+
+        &:last-of-type {
+          margin-bottom: 0.5rem;
+        }
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+
+      @include break(sm) {
+        flex-direction: row;
+      }
     }
 
     a.button {
-        margin-top: 0.5rem;
-        margin-bottom: auto;
+        margin-top: auto;
+        // margin-bottom: auto;
 
         @include break(sm) {
             align-self: baseline;
             text-align: left;
+            margin-left: 0.3rem;
+            margin-bottom: 0 !important;
+
+            &:nth-of-type(1) {
+              margin-left: 0;
+            }
         }
 
         align-self: stretch;
         text-align: center;
+        margin-bottom: 0.3rem;
+
+        // last button in card has no bottom margin.
+        &:nth-last-of-type(1) {
+          margin-bottom: 0;
+        }
     }
 
     ::selection {

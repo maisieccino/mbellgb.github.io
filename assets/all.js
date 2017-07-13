@@ -1,9 +1,11 @@
 ---
 ---
 
+{% include_relative assets/bower_components/jquery/dist/jquery.min.js %}
+
 /* FastClick */
 
-{% include_relative bower_components/fastclick/lib/fastclick.js %}
+{% include_relative assets/bower_components/fastclick/lib/fastclick.js %}
 
 /* Main script */
 

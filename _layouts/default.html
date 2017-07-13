@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:500|Space+Mono" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <!-- open graph -->
+    {% if page.title %}
+      <meta property="og:title" content="{{ page.title }}" />
+    {% endif %}
+    {% if page.layout == "post" %}
+      <meta property="og:type" content="article" />
+      <meta property="og:article:published_time" content="{{ page.date }}" />
+      <meta property="og:article:author" content="Matt Bell" />
+      <meta property="og:article:tag" content="{{ page.tags }}" />
+      <meta property="og:article:category" content="{{ page.category }}" />
+    {% endif %}
+    {% if page.img %}
+      <meta property="og:image" content="{{ page.img }}" />
+    {% endif %}
 </head>
 
 <body>
@@ -24,7 +39,6 @@
         {{ content }}
     </div><!-- div container -->
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="/assets/all.js"></script>
 </body>
 

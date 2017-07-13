@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="jumbo no-dot" {% if page.img %} style="background-image: url('{{ page.img | prepend: site.baseurl }}')" {% endif %}>
+  <div><h1>{{ page.name }}</h1></div>
+  <div><h2>{{ page.view }} View</h2></div>
+</div>
+
+<div class="main">
+    <a class="button" href="/stickers" >Go Back</a>
+
+    {% assign sticker_set_name = page.name | slugify %}
+    {% assign sticker_view_name = page.view | slugify %}
+    {% assign sticker_set = site.data.stickers.devices | where: "name", page.name | sample %}
+    {% assign view = sticker_set.views | where: "name", page.view | sample %}
+
+    <svg class="stickerView" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {{view.viewbox.width}} {{view.viewbox.height}}" preserveAspectRatio="xMinYMin meet">
+      <image width="{{ view.width }}" height="{{ view.height }}" xlink:href="{{ view.src }}">
+      </image>
+      {{ content }}
+    </svg>
+    <!-- content == image map -->
+
+    <h2>Stickers on {{ view.name }}:</h2>
+    <ul>
+      {% for sticker in view.stickers %}
+        <li>{{ sticker.name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="sticker-modal" style="display:none" id="stickerDetailModal">
+    <img id="stickerDetailImg" src="" alt="View of the full sticker"/>
+    <span class="modal-close">x</span>
+    <div class="modal-content">
+      <h1 id="stickerDetailName"></h1>
+      <p id="stickerDetailDescription"></p>
+      <p id="stickerDetailDate"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Matthew Bell</p>
+
+    <div class="socials">
+      <a class="social" data-tooltip="@mbell_gb" href="//twitter.com/mbell_gb"><i class="fa fa-twitter"></i></a>
+      <a class="social" data-tooltip="mbellgb" href="//github.com/mbellgb"><i class="fa fa-github"></i></a>
+      <a class="social" data-tooltip="mbell_gb" href="//instagram.com/mbell_gb"><i class="fa fa-instagram"></i></a>
+      <a class="social" data-tooltip="mbellcs" href="https://uk.linkedin.com/in/mbellcs"><i class="fa fa-linkedin"></i></a>
+      <a class="social" data-tooltip="Blog" href="//blog.mbell.me"><i class="fa fa-pencil-square-o"></i></a>
+      <a class="social" data-tooltip="@mbell_gb" href="//medium.com/@mbell_gb"><i class="fa fa-medium"></i></a>
+    </div>
+  </footer>
+
+  <script>
+  var stickers = {};
+  {% for sticker in view.stickers %}
+  stickers.{{ sticker.id }} = {{ sticker | jsonify }};
+  {% endfor %}
+  </script>

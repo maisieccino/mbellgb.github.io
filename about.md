@@ -27,7 +27,7 @@ You can find out about my work history and experience on
 [LinkedIn](https://www.linkedin.com/in/mbellcs/).
 
 ## Internet Services Developer (Intern) at [Netcraft](https://netcraft.com/)
-_June to September 2016_
+*June to September 2016*
 
 ## Backend Engineer Intern at [Pip App](https://www.pip.group/)
 *June to July 2017*
@@ -40,7 +40,7 @@ Here's a definitive list of what I've been up to.
 
 ## 2017
 
-* **As Yet Untitled Hackathon (Upcoming)** -- TBA in August.
+* **Hatch (Upcoming)** -- TBA in August.
 
 * **MLH Prime EU Regional** -- London, UK. Night shift volunteer for MLH's own
   hackathon. Duties mainly included running the hardware lab and assisting

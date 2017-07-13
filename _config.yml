@@ -34,6 +34,12 @@ collections:
   redirects:
     output: true
     permalink: /:path/
+  stickers:
+    output: true
+    permalink: /:collection/:path/
+  posts:
+    output: true
+    permalink: /blog/:path/
 
 # Build settings
 markdown: kramdown
@@ -51,7 +57,7 @@ kramdown:
     span:
       line_numbers: false
     block:
-      line_numbers: true
+      line_numbers: false
       start_line: 1
 theme: minima
 highlighter: rouge
@@ -59,6 +65,7 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-paginate
+  - jemoji
   - rouge
 exclude:
   - Gemfile
@@ -68,16 +75,19 @@ exclude:
   - node_modules
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: projects
     values:
       layout: page
-  -
-    scope:
+  - scope:
       path: ""
       type: posts
     values:
       lauout: post
       is_post: true
+  - scope:
+      path: ""
+      type: stickers
+    values:
+      layout: sticker

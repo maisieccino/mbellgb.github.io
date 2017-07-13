@@ -19,6 +19,13 @@ pre,code {
         font-size: 1rem;
     }
 }
+pre {
+  padding: 0.5rem;
+  overflow-x: scroll;
+  code {
+    padding: 0;
+  }
+}
 figure.highlight {
     padding: 0.75rem;
     margin: 0;
@@ -96,6 +103,7 @@ li {
     p,li {
         font-family: $font_writing;
         line-height: 2.05rem;
+        text-align: justify;
         @include respond-to(tablet) {
             line-height: 1.8rem;
         }

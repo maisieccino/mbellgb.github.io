@@ -1,0 +1,87 @@
+{
+  "devices": [
+    {
+      "name": "Inspiron",
+      "description": "The hacktop.",
+      "img": "/assets/img/stickers/inspiron/inspiron.jpg",
+      "views": [
+        {
+          "name": "Back",
+          "src": "/assets/img/stickers/inspiron/back.jpg",
+          "width": 1422.4,
+          "height": 1066.8,
+          "viewbox": {
+            "width": 1422.40,
+            "height": 1066.80
+          },
+          "stickers": [
+            {
+              "name": "She++"
+            }
+          ]
+        },
+        {
+          "name": "Keyboard",
+          "src": "/assets/img/stickers/inspiron/keyboard.jpg",
+          "width": 1422.4,
+          "height": 1066.8,
+          "viewbox": {
+            "width": 1422.40,
+            "height": 1066.80
+          },
+          "stickers": [
+            {
+              "name": "Is This Real Life?",
+              "id": "isThisRealLife",
+              "date": "2015-11-07",
+              "description": "Obtained via sticker pack from a Capture The Flag (CTF) security event at Facebook's London offices.",
+              "img": "/assets/img/stickers/inspiron/is-this-real-life.png"
+            },
+            {
+              "name": "Webstorm",
+              "id": "webstorm",
+              "date": "2017-04-22",
+              "description": "Webstorm IDE logo. Picked up from the MLH stand at Anvil Hack III, held at Goldsmiths University.",
+              "img": "/assets/img/stickers/inspiron/webstorm.png"
+            },
+            {
+              "name": "10 Years Of TechSoc",
+              "id": "techsoc10",
+              "date": "2016-10-26",
+              "description": "Limited edition sticker celebrating 10 years of UCLU TechSoc. Obtained from the 10 year birthday party, designed by the talented Vicky Dineshchandra.",
+              "img": "/assets/img/stickers/inspiron/techsoc-10.png"
+            },
+            {
+              "name": "Octocat with Pencil",
+              "id": "octocatdraw",
+              "date": "2016-03-17",
+              "description": "GitHub sticker obtained during Tech Night LDN 2016, at The Shard.",
+              "img": "/assets/img/stickers/inspiron/octocat-draw.png"
+            },
+            {
+              "name": "Intel Processor Sticker",
+              "id": "intelcore",
+              "date": "2014-12-10",
+              "description": "It's an Intel sticker. What more do I need to say?",
+              "img": "/assets/img/stickers/inspiron/intel-core.png"
+            },
+            {
+              "name": "Facebook Like",
+              "id": "like",
+              "date": "2016-09-17",
+              "description": "Obtained from the Facebook stand at Hack The North 2016, Waterloo, Canada.",
+              "img": "/assets/img/stickers/inspiron/like.png"
+            },
+            {
+              "name": "Sammy The Shark - Pixellated",
+              "id": "sammyPixel",
+              "date": "2016-10-24",
+              "description": "Mascot for DigitalOcean. Sticker obtained during Hacktoberfest Ldn 2016, a meetup at Newspeak House to work on open source projects.",
+              "img": "/assets/img/stickers/inspiron/sammy-pixel.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

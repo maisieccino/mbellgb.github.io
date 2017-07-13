@@ -17,7 +17,6 @@ $.fn.exists = function() {
 
 // This fixes the weird page jumping thing on mobile browsers.
 // http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome
-jQuery(window).resize("resizeBackground");
 var resizeFactor = function() {
     var width = jquery(window).width;
 
@@ -29,13 +28,14 @@ var resizeFactor = function() {
     }
     else return 0.8;
 };
-function resizeBackground() {
+resizeBackground = () => {
     var jumbo = $('.jumbo-home');
     if (jumbo.exists()) {
         jumbo.height(resizeFactor * jQuery(window).height());
     }
 }
 resizeBackground();
+$(window).resize(() => resizeBackground);
 
 // Red dots on titles
 var jumboTitle = $('.jumbo:not(.no-dot) h1');
@@ -59,4 +59,20 @@ $('.menu-button').click(function() {
 $('.container').click(function () {
     $('.menu-button').removeClass('active');
     $('body').removeClass('active');
+});
+
+$('.modal-close').click(function () {
+  $(this).parent().fadeOut();
+});
+
+$(".stickerView path, .stickerView ellipse").click(function () {
+  const id = $(this).attr("id");
+  const sticker = stickers[id];
+  console.log(sticker.img);
+  $("#stickerDetailName").text(sticker.name);
+  $("#stickerDetailDescription").text(sticker.description || "");
+  $("#stickerDetailDate").text(`Date obtained: ${sticker.date || "Unknown"}`);
+  $("#stickerDetailImg").toggleClass("invisible", !sticker.img);
+  $("#stickerDetailImg").attr("src", sticker.img || "");
+  $(".sticker-modal").fadeIn();
 });

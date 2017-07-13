@@ -1,0 +1,10 @@
+.stickerView {
+  pointer-events: all;
+  fill: none;
+  transition: 0.25s fill;
+  cursor: pointer;
+
+  path:hover,ellipse:hover {
+    fill: $color_brand3;
+  }
+}
