@@ -1,7 +1,7 @@
 ---
 title: MailSnail
 project_url: https://devpost.com/software/junction2016-7upynt
-description: A task-based recruitment platform created for Atos Recruitment.
+description: Physical post is such a pain to deal with. MailSnail aims to help.
 img: /assets/img/mailsnail.jpg
 ---
 
