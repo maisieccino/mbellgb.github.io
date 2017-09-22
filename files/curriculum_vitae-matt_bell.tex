@@ -15,7 +15,7 @@
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
 \setmainfont{Yantramanav}
-\setsansfont{Product Sans}
+\setsansfont{Apercu}
 \titleformat*{\subsection}{\sffamily\Large}
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
@@ -57,12 +57,11 @@
 % \ \ Student at UCL  \textbullet
 % \ \ Flat 6 Holmdale Mansions\ \ \textbullet
 % \ \ London NW6 1BG
-\ \ \faicon{github} mbellgb\ \ \textbullet
-\ \ \faicon{medium} @mbell\_gb\ \ \textbullet
-\ \ \faicon{twitter} @mbell\_gb\ \ \textbullet
+\ \ \faicon{github} mbellgb\ \ \textbullet\
+\ \ \faicon{medium} @mbell\_gb\ \ \textbullet\
+\ \ \faicon{twitter} @mbell\_gb\ \ \textbullet\
 \\
-% +44 7827 638207\ \ \textbullet
-\ \ matt@mbell.me\ \ \textbullet
+\ \ matt@mbell.me\ \ \textbullet\
 \ \ https://mbell.me/
 \end{center}
 
@@ -75,12 +74,12 @@
 	\parskip=0.1em
 
 	\item
-	\headerrow
+	\headerrow%
 		{\textbf{University College London}}
-		{\textbf{Year 2 of 3, first-class average grade}}\\
-	\headerrow
+		{\textbf{Year 3 of 3, 2:1 average grade}}\\
+	\headerrow%
 		{\emph{BSc Computer Science}}
-		{\emph{Sep 2015 -- 2018 (expected)}}
+		{\emph{Sep 2015 --- 2018 (expected)}}
 	% \begin{itemize*}
 	% 	\item Averaged a first-class grade across my first year modules.
 	% \end{itemize*}
@@ -111,33 +110,44 @@
  	\parskip=0.1em
 
  	\item
- 	\headerrow
+ 	\headerrow%
  		{\textbf{Netcraft}}
- 		{\textbf{Bath, Somerset}}
+		{\textbf{Bath, UK}}
  	\\
- 	\headerrow
+ 	\headerrow%
  		{\emph{Internet Services Developer (Internship)}}
- 		{\emph{Jun 2016 -- Sep 2016}}
+ 		{\emph{Jun 2016 --- Sep 2016}}
  	\begin{itemize*}
  		\item Maintained production servers and supported devops work, as well as working as the primary on-call systems admin at times.
 		\item Develop new features for the company's systems including package version archiving and input validation for the fraud detection systems.
 		\item Helped to set up clients on the internal systems and write config files for them.
  	\end{itemize*}
 
-% 	\item
-% 	\headerrow
-% 		{\textbf{Hornet Services Sailing Club}}
-% 		{\textbf{Gosport, Hampshire}}
-% 	\\
-% 	\headerrow
-% 		{\emph{Galley Staff Member}}
-% 		{\emph{Apr 2014 -- Sep 2015}}
-% 	\begin{itemize*}
-% 		\item Tasks involved working in the clubhouse galley in a small team washing utensils and pots, preparing dishes and serving food to our guests.
-% 		\item Worked under a zero-hour contract and would often be called in for functions and to cover regular staff.
-% 		\item Learnt how to work to a high standard in an efficient manner, and to handle multiple tasks at once.
-% 		\item We served a large variety of customers, from small children to retired servicemen who frequented the clubhouse.
-% 	\end{itemize*}
+ 	\item
+ 	\headerrow%
+ 		{\textbf{Pip App}}
+		{\textbf{London, UK}}
+ 	\\
+ 	\headerrow%
+ 		{\emph{Backend Developer Intern}}
+ 		{\emph{Jun 2017 --- Jul 2017}}
+ 	\begin{itemize*}
+	    \item Setup cloud data store (Firebase) and built admin interface/sync tool using Node.JS
+	    \item Worked on integrating data into app, built on the React Native platform
+ 	\end{itemize*}
+	\item
+	\headerrow%
+		{\textbf{Interrodata}}
+		{\textbf{London, UK}}
+	\\
+	\headerrow%
+		{\emph{Frontend Development Contractor}}
+		{\emph{Aug 2017 --- Sep 2017}}
+	\begin{itemize*}
+	    \item Worked to integrate separate API backend (written in Python) with frontend app (written in React)
+	    \item Set up automated build pipeline, including testing and code linting/formatting
+	    \item Built new features for the frontend, including a sophisticated autocomplete system.
+	\end{itemize*}
 
  \end{itemize}
 
@@ -157,7 +167,7 @@
     Intermediate: C, Ruby\\
     Limited experience: Java, Go
 	\item[Web Technologies:]
-	Experience with popular web technologies such as Express.JS, Ruby On Rails, Socket.io and Django
+	    Experience with popular web technologies such as Node.JS, Ruby On Rails, React and Django
 	\item[DevOps:]
 	Experience using database systems (SQL and NoSQL), web server software (Nginx and Apache), UNIX shells and continuous integration systems (e.g. Travis)
 	% I maintain my own virtual web server and have had experience setting up and running servers. I also have experience with web server software (Nginx \& Apache), database systems (PostgreSQL /MariaDB /MongoDB) and I am proficient with using UNIX shells.
@@ -196,16 +206,10 @@
 \begin{indentsection}{\parindent}
 	\hyphenpenalty=1000
 	\begin{description*}
-		\item[Openticket:]
-		An open source events platform written in Go. I'm focussing mainly on the server-side aspect so that other developers have the freedom to implement their own interfaces.
-		\item[Graduate Recruitment Portal:]
-		First-year university project created for Atos. It's a web app designed to give tasks to candidates for jobs, as a way of assessing them.
-		\item[Git++:]
-		A plugin for the Atom text editor that uses the Leap Motion peripheral to enable gesture control for Git commits.
+		\item[Hatch Hackathon Dashboard:]
+		    A hackathon dashboard written in Ruby on Rails \& React. Allows attendees to view information about the event and find out about upcoming workshops, classes etc., whilst also allowing organisers to manage attendee invites and event information.
 		\item[Mentor Matching App:]
 		Second year group project. An app that automatically pairs mentors with mentees given their preferences and interests. I worked as the sole backend API developer.
-		\item[CoffeeSchool:]
-		An online Javascript course aimed at 14-17 year old students, that walks the user through making a game. I made a custom script to enable tests to be run on the code that the user writes.
 	\end{description*}
 	A selection of projects (plus source code) is available at https://mbell.me/projects.
 \end{indentsection}
