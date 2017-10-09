@@ -2,35 +2,14 @@
 layout: default
 ---
 
-<div class="jumbo jumbo-home">
-    <h1><img src="/assets/img/logo-black.png" aria-hidden="true" height="80px" /> Making Things.</h1>
+<header class="header-home">
+    <h1>I build things.</h1>
     <h2>Matt Bell, London</h2>
-    <hr />
-    <div id="entry-button" class="jumbo-button">Hey there.</div>
-</div>
-<div class="socials">
-    <a data-tooltip="@mbell_gb" href="//twitter.com/mbell_gb"><i class="fa fa-twitter"></i></a>
-    <a data-tooltip="mbellgb" href="//github.com/mbellgb"><i class="fa fa-github"></i></a>
-    <a data-tooltip="mbell_gb" href="//instagram.com/mbell_gb"><i class="fa fa-instagram"></i></a>
-    <a data-tooltip="mbellcs" href="https://uk.linkedin.com/in/mbellcs"><i class="fa fa-linkedin"></i></a>
-    <a data-tooltip="CV" href="/files/curriculum_vitae-matt_bell.pdf"><i class="fa fa-file-pdf-o"></i></a>
-    <a data-tooltip="@mbell_gb" href="//medium.com/@mbell_gb"><i class="fa fa-medium"></i></a>
-</div>
-<div class="main">
-
+    <span>
+        <button id="header-home-button">Hello.</button>
+    </span>
+</header>
+{% include nav.html %}
+<article>
     {{ content }}
-
-    <h1>I've made...</h1>
-    <div class="cards-3">
-        {% assign projects = site.projects %}
-        {% for p in projects limit: 3%}
-            {% include project_card.html p=p %}
-        {% endfor %}
-    </div><!-- main content -->
-    <a class="button" href="/projects">View more...</a>
-</div>
-
-<footer>
-    <p>Matthew Bell</p>
-    <a href="#top">Go to top</a>
-</footer>
+</article>

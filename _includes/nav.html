@@ -1,4 +1,4 @@
-<nav class="perspective-nav">
+<nav>
     {% assign pages = site.pages %}
     {% for redirect in site.redirects %}
         {% assign pages = pages | push: redirect %}
@@ -7,7 +7,11 @@
     {% assign sorted_pages = pages | where: "navigation",true | sort: "order" %}
     {% for p in sorted_pages %}
         {% if p.title %}
-            <a href="{{ p.url | replace:'index.html','' | prepend: site.baseurl }}">{{ p.title }}</a>
+            {% if page.url == p.url %}
+                <a class="current" href="{{ p.url | replace:'index.html','' | prepend: site.baseurl }}">{{ p.title }}</a>
+            {% else %}
+                <a href="{{ p.url | replace:'index.html','' | prepend: site.baseurl }}">{{ p.title }}</a>
+            {% endif %}
         {% endif %}
     {% endfor %}
     <a href="/blog/">Blog</a>

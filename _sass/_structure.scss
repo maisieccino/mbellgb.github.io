@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  background-color: $color-white;
+  color: $color-black;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  z-index: 1;
+  position: relative;
+}
+
+article {
+  position: relative;
+  z-index: -1;
+  width: 95vw;
+  margin: 5rem auto;
+  margin-bottom: 91rem;
+}
