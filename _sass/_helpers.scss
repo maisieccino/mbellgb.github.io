@@ -1,0 +1,23 @@
+@mixin respond-to-portrait($breakpoint) {
+  @include respond-to-base($breakpoint, "portrait") {
+    @content;
+  }
+}
+
+@mixin respond-to-landscape($breakpoint) {
+  @include respond-to-base($breakpoint, "landscape") {
+    @content;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @include respond-to-base($breakpoint, "landscape") {
+    @content;
+  }
+}
+
+@mixin respond-to-base($breakpoint, $orientation) {
+  @media (min-width: $breakpoint), (orientation: $orientation) {
+    @content;
+  }
+}

@@ -7,10 +7,26 @@ body {
   position: relative;
 }
 
-article {
+#main {
   position: relative;
-  z-index: -1;
-  width: 95vw;
-  margin: 5rem auto;
-  margin-bottom: 91rem;
+  z-index: 2;
+  background-color: $color-white;
+  transition: all $animation-default;
+  opacity: 1;
+
+  &.menu-active {
+    transform: translate(-75vw);
+    opacity: 0.5;
+    cursor: pointer;
+    @include respond-to(800px) {
+      transform: translate(-25vw);
+    }
+  }
+}
+
+article {
+  // position: relative;
+  width: 100%;
+  padding: 0 4% 91rem;
+  box-sizing: border-box;
 }

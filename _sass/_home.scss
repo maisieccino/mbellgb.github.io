@@ -1,0 +1,51 @@
+section.home {
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.35rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 0vw;
+
+  @include respond-to(800px) {
+    flex-direction: row;
+    padding: 10vh 6vw;
+    height: 100vh;
+  }
+
+  & > * {
+    flex: 1;
+    @include respond-to(800px) {
+      margin: 0 2vw;
+    }
+  }
+
+  & > div.image {
+    background-color: darken($color-white, 10);
+    margin-top: 2rem;
+    height: 50vh;
+    @include respond-to(800px) {
+      align-self: center;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    @include respond-to(800px) {
+      font-size: 3rem;
+      margin: 1rem 0;
+    }
+    color: $color-blue;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

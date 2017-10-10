@@ -13,7 +13,9 @@ $font-code: "Fira Mono", monospace;
 $gradient-bluemint: linear-gradient(45deg, $color-blue, $color-mint);
 $gradient-bluepink: linear-gradient(45deg, $color-blue, $color-pink);
 
-$animation_default: 0.25s ease-in-out;
+$animation-default: 0.25s ease-in-out;
+
+$nav-height: 5rem;
 
 $breakpoints: (
   xs: 32rem,

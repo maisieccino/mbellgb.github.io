@@ -6,7 +6,7 @@
     <title>Matt Bell</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:500|Space+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:500,600|Space+Mono" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- open graph -->
@@ -27,11 +27,33 @@
 </head>
 
 <body>
-    <div class="container">
+    {% include nav.html %}
+    <div id="main">
         {{ content }}
+        <svg id="icon-gradient" width="0" height="0">
+          <defs>
+            <linearGradient id="grad" x1="0" x2="1" y1="1" y2="0">
+              <stop id="s1" offset="0%" stop-color="#55acee" stop-opacity="0.5" />
+              <stop id="s2" offset="100%" stop-color="#1ed889"/>
+            </linearGradient>
+          </defs>
+        </svg>
     </div><!-- div container -->
 
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="/assets/all.js"></script>
+    <script>
+      feather.replace();
+
+      // find the icons on home page header, then:
+      // set stroke attribute to gradient defined above, and
+      // add a <link> tag inside SVG to reference the element
+      const socialIcons = document.querySelectorAll(".social svg");
+      [...socialIcons].forEach(icon => {
+        icon.setAttribute("stroke", "url(#grad)");
+        icon.innerHTML = `${icon.innerHTML} <use xlink:href="#icon-gradient`
+      });
+    </script>
 </body>
 
 </html>

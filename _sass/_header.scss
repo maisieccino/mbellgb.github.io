@@ -1,3 +1,6 @@
+$header-bp-md: 800px;
+$header-bp-lg: 1300px;
+
 header {
   position: relative;
   z-index: 1;
@@ -14,6 +17,7 @@ header.header-home {
 
   h1,
   h2 {
+    text-align: center;
     background: linear-gradient(45deg, $color-blue, $color-mint);
     background-clip: text;
     -webkit-background-clip: text;
@@ -22,13 +26,27 @@ header.header-home {
   }
 
   h1 {
-    font-size: 9rem;
-    margin: 1rem 0;
+    font-size: 3.5rem;
+    margin: 0 0 1rem;
+    @include respond-to($header-bp-md) {
+      font-size: 6rem !important;
+      margin: 0 0 1rem;
+    }
+    @include respond-to($header-bp-lg) {
+      font-size: 9rem;
+    }
   }
 
   h2 {
-    font-size: 4rem;
-    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+
+    @include respond-to($header-bp-md) {
+      font-size: 3rem !important;
+    }
+    @include respond-to($header-bp-lg) {
+      font-size: 4rem;
+    }
   }
 
   button {
@@ -43,6 +61,7 @@ header.header-home {
     cursor: pointer;
     background: transparent;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
+    padding: 0.5rem;
 
     span {
       z-index: 0;
@@ -89,8 +108,40 @@ header.header-home {
     }
   }
 
+  .social {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    @include respond-to($header-bp-md) {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $color-mint;
+      transform: scale(1.5);
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.2rem;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        background-color: rgba($color-mint, 0.2);
+      }
+    }
+  }
+
   ::selection {
     background-color: $color-blue;
     color: $color-white;
   }
+}
+
+#icon-gradient {
+  visibility: hidden;
 }

@@ -8,8 +8,32 @@ layout: default
     <span>
         <button id="header-home-button"><span>Hello.</span></button>
     </span>
+    <span class="social">
+        <a target="_blank" title="Twitter" href="https://twitter.com/mbell_gb"><i data-feather="twitter" aria-label="Twtiter"></i></a>
+        <a target="_blank" title="CV" href="/files/curriculum_vitae-matt_bell.pdf"><i data-feather="file-text" aria-label="CV"></i></a>
+        <a target="_blank" title="Facebook" href="https://facebook.com/mbellgb"><i data-feather="facebook" aria-label="Facebook"></i></a>
+        <a target="_blank" title="GitHub" href="https://github.com/mbellgb"><i data-feather="github" aria-label="GitHub"></i></a>
+        <a target="_blank" title="Instagram" href="https://instagram.com/mbell_gb"><i data-feather="instagram" aria-label="Instagram"></i></a>
+    </span>
 </header>
-{% include nav.html %}
 <article>
-    {{ content }}
+    <section class="home" id="section-about">
+        <aside>
+            <h1>I’m a computer science student at UCL.</h1>
+            <p>I’m expecting to graduate in July 2018. I enjoy working with web applications, networking,
+                the Internet of Things and some design work too. But that’s not all!</p>
+            <div><a href="/about" class="button">My work + study</a></div>
+        </aside>
+        <div class="image"><img src="/assets/img/gradient-nobg.png"/></div>
+    </section>
+    <hr />
+    <section class="home" id="section-projects">
+        <div class="image"></div>
+        <aside>
+            <h1>I enjoy working on random projects.</h1>
+            <p>Some of them come from attending hackathons, weekend-long events where you create new things.
+                Other projects are a bit more spontaneous.</p>
+            <div><a href="/projects" class="button">More projects</a></div>
+        </aside>
+    </section>
 </article>
