@@ -1,3 +1,16 @@
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker.register("/assets/js/sw.js").then(
+      registration => {
+        console.log(
+          `Service worker registered with scope ${registration.scope}`,
+        );
+      },
+      err => console.log(`Service worker registration failed: ${err}`),
+    );
+  });
+}
+
 function scrollIt(destination, duration = 200, easing = "linear", callback) {
   const easings = {
     linear(t) {
