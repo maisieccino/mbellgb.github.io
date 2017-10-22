@@ -13,6 +13,9 @@ body {
   background-color: $color-white;
   transition: all $animation-default;
   opacity: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   &.menu-active {
     transform: translate(-75vw);
@@ -28,6 +31,7 @@ article {
   width: 100%;
   padding: 0 4%;
   box-sizing: border-box;
+  flex: 1;
 
   &.page {
     @include respond-to(600px) {
@@ -40,6 +44,7 @@ article {
 
 footer {
   padding: 2rem 10%;
+  flex: 0;
   background: $gradient-bluemint;
   display: flex;
   flex-direction: column;

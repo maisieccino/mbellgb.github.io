@@ -7,7 +7,6 @@ header {
   z-index: 1;
   min-height: 30vh;
   color: $color-black;
-  background: $gradient-bluepink;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -16,6 +15,21 @@ header {
 header:not(.header-home) {
   align-items: flex-start;
   justify-content: center;
+  z-index: 0;
+
+  &::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+    background: $gradient-bluepink;
+    z-index: -1;
+    opacity: 0.6;
+  }
+
   @include respond-to(600px) {
     padding: 0 15%;
   }
@@ -26,6 +40,12 @@ header:not(.header-home) {
     background-color: $color-mint;
     margin: 0.5rem 0;
     padding: 0.25rem;
+    display: inline;
+    box-shadow: 1vh 0 0 $color-mint, -1vh 0 0 $color-mint;
+  }
+
+  div {
+    margin: 0.5rem 0;
   }
 
   h1 {
