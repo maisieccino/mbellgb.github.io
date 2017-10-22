@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card-img" style="background: url('{{ p.img | prepend: site.baseurl }}')"></div>
+  <div class="card-body">
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.description }}</p>
+  </div>
+  <div><a href="{{ p.url | prepend: site.baseurl }}" class="button">Learn More</a></div>
+</div>

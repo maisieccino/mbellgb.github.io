@@ -5,9 +5,27 @@
     <meta charset="utf-8" />
     <title>Matt Bell</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:500|Space+Mono" rel="stylesheet">
+    <link defer rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link defer href="https://fonts.googleapis.com/css?family=Poppins:500,600|Space+Mono" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/ms-icon-144x144.png">
+    <meta name="theme-color" content="#d81e6d">
 
     <!-- open graph -->
     {% if page.title %}
@@ -27,20 +45,39 @@
 </head>
 
 <body>
-    <a id="top"></a>
-    <div class="menu-button">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-
     {% include nav.html %}
-
-    <div class="container">
+    <div id="main">
         {{ content }}
+
+        <footer>
+          <p>Made by Matt <i data-feather="bell"></i></p>
+        </footer>
+
+        <svg id="icon-gradient" width="0" height="0">
+          <defs>
+            <linearGradient id="grad" x1="0" x2="1" y1="1" y2="0">
+              <stop id="s1" offset="0%" stop-color="#55acee" stop-opacity="0.5" />
+              <stop id="s2" offset="100%" stop-color="#1ed889"/>
+            </linearGradient>
+          </defs>
+        </svg>
     </div><!-- div container -->
 
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="/assets/all.js"></script>
+    <script>
+      feather.replace();
+
+      // find the icons on home page header, then:
+      // set stroke attribute to gradient defined above, and
+      // add a <link> tag inside SVG to reference the element
+      const socialIcons = document.querySelectorAll(".social svg");
+      // convert NodeList to Array.
+      [...socialIcons].forEach(icon => {
+        icon.setAttribute("stroke", "url(#grad)");
+        icon.innerHTML = `${icon.innerHTML} <use xlink:href="#icon-gradient`
+      });
+    </script>
 </body>
 
 </html>

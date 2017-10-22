@@ -1,78 +1,154 @@
-$(function() {
-    FastClick.attach(document.body);
-});
-
-$.fn.exists = function() {
-    return this.length !== 0;
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker.register("/assets/js/sw.js").then(
+      registration => {
+        console.log(
+          `Service worker registered with scope ${registration.scope}`,
+        );
+      },
+      err => console.log(`Service worker registration failed: ${err}`),
+    );
+  });
 }
 
-// $('.jumbo').each(function () {
-//     var imgUrl = $(this).data('img');
-//     if (imgUrl) {
-//         console.log(imgUrl);
-//         $(this).css("background-image", "url("+imgUrl+")");
-//     }
+function scrollIt(destination, duration = 200, easing = "linear", callback) {
+  const easings = {
+    linear(t) {
+      return t;
+    },
+    easeInQuad(t) {
+      return t * t;
+    },
+    easeOutQuad(t) {
+      return t * (2 - t);
+    },
+    easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    },
+    easeInCubic(t) {
+      return t * t * t;
+    },
+    easeOutCubic(t) {
+      return --t * t * t + 1;
+    },
+    easeInOutCubic(t) {
+      return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+    },
+    easeInQuart(t) {
+      return t * t * t * t;
+    },
+    easeOutQuart(t) {
+      return 1 - --t * t * t * t;
+    },
+    easeInOutQuart(t) {
+      return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t;
+    },
+    easeInQuint(t) {
+      return t * t * t * t * t;
+    },
+    easeOutQuint(t) {
+      return 1 + --t * t * t * t * t;
+    },
+    easeInOutQuint(t) {
+      return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t;
+    },
+  };
+
+  const start = window.pageYOffset;
+  const startTime =
+    "now" in window.performance ? performance.now() : new Date().getTime();
+
+  const documentHeight = Math.max(
+    document.body.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.clientHeight,
+    document.documentElement.scrollHeight,
+    document.documentElement.offsetHeight,
+  );
+  const windowHeight =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.getElementsByTagName("body")[0].clientHeight;
+  const destinationOffset =
+    typeof destination === "number" ? destination : destination.offsetTop;
+  const destinationOffsetToScroll = Math.round(
+    documentHeight - destinationOffset < windowHeight
+      ? documentHeight - windowHeight
+      : destinationOffset,
+  );
+
+  if ("requestAnimationFrame" in window === false) {
+    window.scroll(0, destinationOffsetToScroll);
+    if (callback) {
+      callback();
+    }
+    return;
+  }
+
+  function scroll() {
+    const now =
+      "now" in window.performance ? performance.now() : new Date().getTime();
+    const time = Math.min(1, (now - startTime) / duration);
+    const timeFunction = easings[easing](time);
+    window.scroll(
+      0,
+      Math.ceil(timeFunction * (destinationOffsetToScroll - start) + start),
+    );
+
+    if (window.pageYOffset === destinationOffsetToScroll) {
+      if (callback) {
+        callback();
+      }
+      return;
+    }
+
+    requestAnimationFrame(scroll);
+  }
+
+  scroll();
+}
+
+const headerHomeButton = document.querySelector("#header-home-button");
+if (headerHomeButton) {
+  headerHomeButton.addEventListener("click", () => {
+    const header = document.querySelector("header");
+    scrollIt(header.offsetTop + header.offsetHeight, 800, "easeInOutQuad", () =>
+      console.log(`Just finished scrolling to ${window.pageYOffset}px`),
+    );
+    // soon(TM)
+    //window.scrollTo({
+    //  behavior: "smooth",
+    //  left: 0,
+    //  top: header.offsetTop + header.offsetHeight,
+    //  duration: 1000,
+    //});
+  });
+}
+
+const menuActiveClass = "menu-active";
+const navButton = document.querySelector("#nav-button");
+
+document.querySelector("#nav-button").addEventListener("click", () => {
+  const main = document.querySelector("#main");
+  main.classList.toggle(menuActiveClass);
+  navButton.classList.toggle(menuActiveClass);
+});
+
+document.querySelector("#main").addEventListener("click", function() {
+  const menuOpen = this.classList.contains(menuActiveClass);
+  if (menuOpen) {
+    this.classList.remove(menuActiveClass);
+    navButton.classList.remove(menuActiveClass);
+  }
+});
+
+// $(".container").click(function() {
+//   $(".menu-button").removeClass("active");
+//   $("body").removeClass("active");
 // });
-
-
-// This fixes the weird page jumping thing on mobile browsers.
-// http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome
-var resizeFactor = function() {
-    var width = jquery(window).width;
-
-    if (width > 2500) {
-        return 0.9;
-    }
-    else if (width < 750) {
-        return 0.7;
-    }
-    else return 0.8;
-};
-resizeBackground = () => {
-    var jumbo = $('.jumbo-home');
-    if (jumbo.exists()) {
-        jumbo.height(resizeFactor * jQuery(window).height());
-    }
-}
-resizeBackground();
-$(window).resize(() => resizeBackground);
-
-// Red dots on titles
-var jumboTitle = $('.jumbo:not(.no-dot) h1');
-if ($(jumboTitle).length) {
-    jumboTitle.html(jumboTitle.html().replace(/\.$/,''));
-    jumboTitle.html(jumboTitle.html() + '<span class="red">.</span>');
-}
-
-$('#entry-button').click(function() {
-    console.log("ouch");
-    $('html, body').animate({
-        scrollTop: $('.main').offset().top
-    }, 1000);
-});
-
-$('.menu-button').click(function() {
-    $(this).toggleClass('active');
-    $('body').toggleClass('active');
-});
-
-$('.container').click(function () {
-    $('.menu-button').removeClass('active');
-    $('body').removeClass('active');
-});
-
-$('.modal-close').click(function () {
-  $(this).parent().fadeOut();
-});
-
-$(".stickerView path, .stickerView ellipse").click(function () {
-  const id = $(this).attr("id");
-  const sticker = stickers[id];
-  console.log(sticker.img);
-  $("#stickerDetailName").text(sticker.name);
-  $("#stickerDetailDescription").text(sticker.description || "");
-  $("#stickerDetailDate").text(`Date obtained: ${sticker.date || "Unknown"}`);
-  $("#stickerDetailImg").toggleClass("invisible", !sticker.img);
-  $("#stickerDetailImg").attr("src", sticker.img || "");
-  $(".sticker-modal").fadeIn();
-});
+//
+// $(".modal-close").click(function() {
+//   $(this)
+//     .parent()
+//     .fadeOut();
+// });

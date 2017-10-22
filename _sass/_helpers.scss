@@ -1,44 +1,23 @@
-.red {
-    color: $color_brand2;
+@mixin respond-to-portrait($breakpoint) {
+  @include respond-to-base($breakpoint, "portrait") {
+    @content;
+  }
 }
 
-::selection {
-    background-color: $color_brand2;
-    opacity: 1;
+@mixin respond-to-landscape($breakpoint) {
+  @include respond-to-base($breakpoint, "landscape") {
+    @content;
+  }
 }
 
-// responsive mixin.
-@mixin respond-to($screen) {
-     @if $screen == hidpi{
-        @media (min-width: 2500px) {
-             @content;
-        }
-    }
-    @else if $screen == desktop {
-         @media (min-width: 1200px), (orientation: landscape){
-            @content;
-        }
-    }
-    @else if $screen == tablet {
-         @media (min-width: 750px){
-            @content;
-        }
-    }
-    @else if $screen == mobilarge {
-         @media (min-width: 480px){
-            @content;
-        }
-    }
-    @else if $screen == mobionly {
-         @media (max-width: 480px){
-            @content;
-        }
-    }
+@mixin respond-to($breakpoint) {
+  @include respond-to-base($breakpoint, "landscape") {
+    @content;
+  }
 }
 
-
-@mixin break($size) {
-    @media (min-width: map-get($breakpoints, $size)) {
-        @content;
-    }
+@mixin respond-to-base($breakpoint, $orientation) {
+  @media (min-width: $breakpoint), (orientation: $orientation) {
+    @content;
+  }
 }

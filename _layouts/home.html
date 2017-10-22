@@ -2,35 +2,59 @@
 layout: default
 ---
 
-<div class="jumbo jumbo-home">
-    <h1>Do things differently.</h1>
-    <h2>Matt Bell, London</h2>
+<header class="header-home">
+  <h1>I build things.</h1>
+  <h2>Matt Bell, London</h2>
+  <span>
+    <button id="header-home-button"><span>Hello.</span></button>
+  </span>
+  <span class="social">
+    <a target="_blank" title="Twitter" href="https://twitter.com/mbell_gb"><i data-feather="twitter" aria-label="Twtiter"></i></a>
+    <a target="_blank" title="CV" href="/files/curriculum_vitae-matt_bell.pdf"><i data-feather="file-text" aria-label="CV"></i></a>
+    <a target="_blank" title="Facebook" href="https://facebook.com/mbellgb"><i data-feather="facebook" aria-label="Facebook"></i></a>
+    <a target="_blank" title="GitHub" href="https://github.com/mbellgb"><i data-feather="github" aria-label="GitHub"></i></a>
+    <a target="_blank" title="Instagram" href="https://instagram.com/mbell_gb"><i data-feather="instagram" aria-label="Instagram"></i></a>
+  </span>
+</header>
+<article>
+  <section class="home" id="section-about">
+    <aside>
+      <h1>I’m a computer science student at UCL.</h1>
+      <p>I’m expecting to graduate in July 2018. I enjoy working with web applications, networking,
+        the Internet of Things and some design work too. But that’s not all!</p>
+        <div><a href="/about" class="button">My work + study</a></div>
+      </aside>
+      <div class="image"><img src="/assets/img/gradient-nobg.png"/></div>
+    </section>
     <hr />
-    <div id="entry-button" class="jumbo-button">Hey there.</div>
-</div>
-<div class="socials">
-    <a data-tooltip="@mbell_gb" href="//twitter.com/mbell_gb"><i class="fa fa-twitter"></i></a>
-    <a data-tooltip="mbellgb" href="//github.com/mbellgb"><i class="fa fa-github"></i></a>
-    <a data-tooltip="mbell_gb" href="//instagram.com/mbell_gb"><i class="fa fa-instagram"></i></a>
-    <a data-tooltip="mbellcs" href="https://uk.linkedin.com/in/mbellcs"><i class="fa fa-linkedin"></i></a>
-    <a data-tooltip="CV" href="/files/curriculum_vitae-matt_bell.pdf"><i class="fa fa-file-pdf-o"></i></a>
-    <a data-tooltip="@mbell_gb" href="//medium.com/@mbell_gb"><i class="fa fa-medium"></i></a>
-</div>
-<div class="main">
+    <section class="home" id="section-projects">
+      <div class="projects">
+        <div class="cards-2">
+          {% assign projects = site.projects %}
+          {% for p in projects limit: 4%}
+            {% include card.html p=p %}
+          {% endfor %}
+        </div>
+      </div>
+      <aside>
+        <h1>I enjoy working on random projects.</h1>
+        <p>Some of them come from attending hackathons, weekend-long events where you create new things.
+          Other projects are a bit more spontaneous.</p>
+          <div><a href="/projects" class="button">More projects</a></div>
+        </aside>
+      </section>
 
-    {{ content }}
+      <hr />
 
-    <h1>I've made...</h1>
-    <div class="cards-3">
-        {% assign projects = site.projects %}
-        {% for p in projects limit: 3%}
-            {% include project_card.html p=p %}
-        {% endfor %}
-    </div><!-- main content -->
-    <a class="button" href="/projects">View more...</a>
-</div>
-
-<footer>
-    <p>Matthew Bell</p>
-    <a href="#top">Go to top</a>
-</footer>
+      <section class="home" id="section-hackathons">
+        <aside>
+          <h1>I go to lots of hackathons.</h1>
+          <p>Hackathons are the perfect place to try out new pieces of tech, work on projects I wouldn't
+            otherwise be able to work on, and to make new friends!</p>
+          <h2 class="big">17</h2>
+          <p>Hackathons attended so far.</p>
+          <p><a href="/hackathons" class="button">View Full List</a></p>
+        </aside>
+        <div class="image"><img src="/assets/img/gitpp.jpg" /></div>
+      </section>
+    </article>

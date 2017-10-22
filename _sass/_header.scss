@@ -1,0 +1,196 @@
+$header-bp-md: 800px;
+$header-bp-lg: 1300px;
+
+header {
+  position: relative;
+  padding: 0 4%;
+  z-index: 1;
+  min-height: 30vh;
+  color: $color-black;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header:not(.header-home) {
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 0;
+
+  &::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+    background: $gradient-bluepink;
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+  @include respond-to(600px) {
+    padding: 0 15%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    background-color: $color-mint;
+    margin: 0.5rem 0;
+    padding: 0.25rem;
+    display: inline;
+    box-shadow: 1vh 0 0 $color-mint, -1vh 0 0 $color-mint;
+  }
+
+  div {
+    margin: 0.5rem 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+header.header-home {
+  height: 100vh;
+  color: $color-blue;
+  background: $color-black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  h1,
+  h2 {
+    text-align: center;
+    background: linear-gradient(45deg, $color-blue, $color-mint);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: $font-heading;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin: 0 0 1rem;
+    @include respond-to($header-bp-md) {
+      font-size: 6rem !important;
+      margin: 0 0 1rem;
+    }
+    @include respond-to($header-bp-lg) {
+      font-size: 9rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+
+    @include respond-to($header-bp-md) {
+      font-size: 3rem !important;
+    }
+    @include respond-to($header-bp-lg) {
+      font-size: 4rem;
+    }
+  }
+
+  button {
+    font-size: 2rem;
+    width: 12rem;
+    color: $color-pink;
+    background: none;
+    margin-top: 5rem;
+    box-sizing: border-box;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
+    padding: 0.5rem;
+
+    span {
+      z-index: 0;
+    }
+
+    &:hover {
+      color: $color-white;
+
+      &::before {
+        transform: translate(0.5rem, 0.5rem);
+      }
+
+      &::after {
+        transform: translate(-0.5rem, -0.5rem);
+      }
+    }
+
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: "";
+      border-width: 0.25rem;
+      border-style: solid;
+      left: 0;
+      top: 0;
+      transition: transform 0.25s ease-in-out;
+    }
+
+    &::before {
+      z-index: 1;
+      left: -0.75rem;
+      top: -0.75rem;
+      border-color: $color-blue;
+    }
+
+    &::after {
+      z-index: 2;
+      left: 0.25rem;
+      top: 0.25rem;
+      border-color: $color-pink;
+    }
+  }
+
+  .social {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    @include respond-to($header-bp-md) {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $color-mint;
+      transform: scale(1.5);
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.2rem;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        background-color: rgba($color-mint, 0.2);
+      }
+    }
+  }
+
+  ::selection {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+}
+
+#icon-gradient {
+  visibility: hidden;
+  display: block;
+}
