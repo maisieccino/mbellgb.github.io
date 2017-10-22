@@ -25,8 +25,34 @@ body {
 }
 
 article {
-  // position: relative;
   width: 100%;
-  padding: 0 4% 91rem;
+  padding: 0 4%;
   box-sizing: border-box;
+
+  &.page {
+    @include respond-to(600px) {
+      width: 70%;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+}
+
+footer {
+  padding: 2rem 10%;
+  background: $gradient-bluemint;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  * {
+    text-align: center;
+  }
+  p {
+    display: inline-flex;
+    justify-content: center;
+
+    svg {
+      margin: 0 0.4rem;
+    }
+  }
 }

@@ -3,17 +3,45 @@ $header-bp-lg: 1300px;
 
 header {
   position: relative;
+  padding: 0 4%;
   z-index: 1;
+  min-height: 30vh;
+  color: $color-black;
+  background: $gradient-bluepink;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header:not(.header-home) {
+  align-items: flex-start;
+  justify-content: center;
+  @include respond-to(600px) {
+    padding: 0 15%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    background-color: $color-mint;
+    margin: 0.5rem 0;
+    padding: 0.25rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
 }
 
 header.header-home {
   height: 100vh;
   color: $color-blue;
-  background-color: $color-black;
+  background: $color-black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0;
 
   h1,
   h2 {
@@ -144,4 +172,5 @@ header.header-home {
 
 #icon-gradient {
   visibility: hidden;
+  display: block;
 }

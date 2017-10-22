@@ -1,0 +1,90 @@
+$card-padding: 0.5rem;
+@for $i from 1 through 5 {
+  .cards-#{$i} {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0.25rem;
+    box-sizing: border-box;
+
+    &.no-padding {
+      padding: 0;
+      margin: #{$card-padding} -#{$card-padding};
+
+      .card {
+        @include respond-to(1400px) {
+          width: calc((100% / #{$i}) - (#{$card-padding} * 2 * #{$i - 1}));
+        }
+      }
+    }
+
+    .card {
+      width: 100%;
+      @include respond-to(1400px) {
+        width: calc((100% / #{$i}) - (#{$card-padding} * 2 * #{$i}));
+      }
+    }
+  }
+}
+
+.card {
+  background-color: $color-pink;
+  padding: $card-padding;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  color: $color-black;
+
+  .card-img {
+    margin: -#{$card-padding} -#{$card-padding} 0 -#{$card-padding};
+    background-position: center center;
+    background-size: cover;
+    flex: 0 0 8rem;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      background: $gradient-bluepink;
+      opacity: 0.7;
+    }
+  }
+
+  .card-body {
+    flex: 1;
+    padding: 0.5rem 0;
+
+    h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.8rem;
+    }
+
+    p {
+      margin: 0.25rem 0;
+    }
+  }
+
+  button,
+  .button {
+    background: none;
+    color: $color-black;
+    border: $color-black solid 0.25rem;
+    transition: all 0.25s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0.25rem;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-pink;
+    }
+  }
+}

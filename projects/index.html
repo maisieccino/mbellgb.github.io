@@ -7,8 +7,8 @@ navigation: true
 order: 3
 ---
 
-<div class="cards-3">
+<div class="cards-3 no-padding">
     {% for p in site.projects %}
-        {% include project_card.html p=p %}
+        {% include card.html p=p %}
     {% endfor %}
 </div>
