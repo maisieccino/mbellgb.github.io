@@ -2,7 +2,7 @@ body {
   margin: 0;
   background-color: $color-white;
   color: $color-black;
-  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-family: $font-body;
   z-index: 1;
   position: relative;
 }
@@ -33,6 +33,10 @@ article {
   box-sizing: border-box;
   flex: 1;
 
+  img:not(.emoji) {
+    width: 100%;
+  }
+
   &.page {
     @include respond-to(600px) {
       width: 70%;
@@ -49,15 +53,19 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
   * {
     text-align: center;
   }
   p {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    transform: scale(1.5);
 
     svg {
-      margin: 0 0.4rem;
+      margin: 0 0 0 0.4rem;
     }
   }
 }

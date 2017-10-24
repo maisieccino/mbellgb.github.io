@@ -28,7 +28,8 @@ section.home {
     }
   }
 
-  & > div.image, & > div.projects {
+  & > div.image,
+  & > div.projects {
     background-color: darken($color-white, 10);
     margin-top: 2rem;
     height: 50vh;
@@ -40,15 +41,15 @@ section.home {
     @include respond-to(800px) {
       align-self: center;
     }
+  }
 
-    img {
-      // height: 5rem;
-    }
+  img {
+    width: auto;
   }
 
   & > div.projects {
     align-self: stretch;
-    height: auto  ;
+    height: auto;
   }
 
   h1 {

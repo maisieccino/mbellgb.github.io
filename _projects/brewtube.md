@@ -19,4 +19,4 @@ The Paulig Muki mug is a commercially available coffee mug that I acquired from 
 * Although I had prior experience using Java (including comprehensive stufy of its concurrency and networking features), I had no experience whatsoever of the inner workings of an Android app and learnt it all from scratch over the course of the weekend. I learned a lot though!
 
 # Learn more
-<a href="https://github.com/mbellgb/sh17" class="button"><i class="fa fa-github"></i> Code</a>
+<a href="https://github.com/mbellgb/sh17" class="button"><i data-feather="github"></i> Code</a>

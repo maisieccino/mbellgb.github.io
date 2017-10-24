@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link defer rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link defer href="https://fonts.googleapis.com/css?family=Poppins:500,600|Space+Mono" rel="stylesheet">
+    {% if page.path contains "_posts" %}
+      <link defer href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+    {% endif %}
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
@@ -50,7 +53,7 @@
         {{ content }}
 
         <footer>
-          <p>Made by Matt <i data-feather="bell"></i></p>
+          <p>Design by Matt <i data-feather="bell"></i></p>
         </footer>
 
         <svg id="icon-gradient" width="0" height="0">

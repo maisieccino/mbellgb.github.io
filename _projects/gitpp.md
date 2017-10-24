@@ -15,5 +15,5 @@ It also makes you feel like a baller when you use it.
 ## Find out more
 You're very welcome to make changes to the code to improve it, or view the project on Devpost.
 
-<a href="//github.com/jakerockland/git-plus-leap" class="button"><i class="fa fa-github"></i> Code</a>
-<a href="https://devpost.com/software/git-plus-leap" class="button">Devpost</a>
+<div class="buttons"><a href="//github.com/jakerockland/git-plus-leap" class="button"><i data-feather="github"></i> Code</a>
+<a href="https://devpost.com/software/git-plus-leap" class="button">Devpost</a></div>
