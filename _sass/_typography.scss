@@ -7,13 +7,25 @@ h6 {
   font-family: $font-heading;
 }
 
+code {
+  font-family: $font-code;
+  border: 0.1rem solid darken($color-white, 20);
+  padding: 0.1rem;
+}
+
 article {
   h1 {
     font-size: 2.25rem;
+    margin: 0.5rem 0 0rem;
   }
 
   h2 {
     font-size: 1.75rem;
+  }
+
+  a:not(.button) {
+    color: darken($color-blue, 10);
+    font-weight: bold;
   }
 }
 

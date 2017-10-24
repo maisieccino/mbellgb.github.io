@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-img" style="background-image: url('{{ h.img | prepend: site.baseurl }}')"></div>
+  <div class="card-body">
+    <h3>{{ h.name }}</h3>
+    <p>{{ h.start_time | date: "%Y-%m-%d" }} to {{ h.end_time | date: "%Y-%m-%d" }}</p>
+    <p>Location: {{h.location}}</p>
+    <p>{{ h.content | excerpt }}</p>
+  </div>
+  {% if h.link %}
+    <div><a target="_blank" href="{{ h.link }}" class="button">Link</a></div>
+  {% endif %}
+</div>

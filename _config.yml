@@ -31,6 +31,8 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  hackathons:
+    output: false
   redirects:
     output: true
     permalink: /:path/
@@ -79,7 +81,12 @@ defaults:
       path: ""
       type: projects
     values:
-      layout: page
+      layout: project
+  - scope:
+      path: ""
+      type: hackathons
+    values:
+      layout: project
   - scope:
       path: ""
       type: posts

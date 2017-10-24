@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="jumbo no-dot post" {% if page.img %} style="background-image: url('{{ page.img | prepend: site.baseurl }}')" {% endif %}>
+<header {% if page.img %} style="background-image: url('{{ page.img | prepend: site.baseurl }}')" {% endif %}>
     {% if page.title %}
         <div><h1>{{ page.title }}</h1></div>
     {% endif %}
@@ -12,26 +12,11 @@ layout: default
     {% if page.project_url %}
         <div><a href="{{ page.project_url }}" class="button">Project Site</a></div>
     {% endif %}
-</div>
+</header>
 
-<div class="main post">
+<article class="post">
     {% if page.subtitle %}
         <h3>{{ page.subtitle }}</h3>
     {% endif %}
     {{ content }}
-
-    <hr />
-</div>
-
-<footer>
-    <p>Matthew Bell</p>
-
-    <div class="socials">
-        <a class="social" data-tooltip="@mbell_gb" href="//twitter.com/mbell_gb"><i class="fa fa-twitter"></i></a>
-        <a class="social" data-tooltip="mbellgb" href="//github.com/mbellgb"><i class="fa fa-github"></i></a>
-        <a class="social" data-tooltip="mbell_gb" href="//instagram.com/mbell_gb"><i class="fa fa-instagram"></i></a>
-        <a class="social" data-tooltip="mbellcs" href="https://uk.linkedin.com/in/mbellcs"><i class="fa fa-linkedin"></i></a>
-        <a class="social" data-tooltip="Blog" href="//blog.mbell.me"><i class="fa fa-pencil-square-o"></i></a>
-        <a class="social" data-tooltip="@mbell_gb" href="//medium.com/@mbell_gb"><i class="fa fa-medium"></i></a>
-    </div>
-</footer>
+</article>

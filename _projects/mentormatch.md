@@ -71,8 +71,10 @@ much clearer picture of how my code should be working, and also was very helpful
 when debugging code.
 
 # Learn more
-<a href="https://github.com/mbellgb/syseng19-code" class="button"><i class="fa fa-github"></i> API Server Code</a>
-<a href="https://github.com/mbellgb/syseng19-webapp" class="button"><i class="fa fa-github"></i> Web App Code</a>
-<a href="https://www.youtube.com/watch?v=9sjhS78iOyU" class="button"><i class="fa fa-youtube"></i> Video Demo</a>
-<a href="https://travis-ci.org/mbellgb/syseng19-code/" class="button"><i class="fa fa-flag-checkered"></i> Continuous Integration</a>
+<div class="buttons">
+<a href="https://github.com/mbellgb/syseng19-code" class="button"><i data-feather="github"></i> API Server Code</a>
+<a href="https://github.com/mbellgb/syseng19-webapp" class="button"><i data-feather="github"></i> Web App Code</a>
+<a href="https://www.youtube.com/watch?v=9sjhS78iOyU" class="button"><i data-feather="video"></i> Video Demo</a>
+<a href="https://travis-ci.org/mbellgb/syseng19-code/" class="button"><i data-feather="check-circle"></i> Continuous Integration</a>
+</div>
 

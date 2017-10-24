@@ -9,9 +9,9 @@ order: 3
 <h2>Page {{ paginator.page }} of {{ paginator.total_pages }}.</h2>
 
 {% for post in paginator.posts %}
-<div class="card">
+<div class="card post">
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p>{{ post.excerpt }}</p>
+    {{ post.excerpt }}
 </div>
 {% endfor %}
 

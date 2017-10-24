@@ -1,0 +1,34 @@
+article.post {
+  @extend .page;
+
+  font-family: $font-writing;
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+
+  @include respond-to(800px) {
+    text-align: left;
+  }
+
+  hr {
+    margin: 2rem 0;
+  }
+
+  img {
+    border: 0.25rem solid $color-blue;
+  }
+
+  code {
+    font-size: 0.9rem;
+  }
+
+  pre > code {
+    border: none;
+    padding: 0;
+  }
+
+  pre.highlight {
+    padding: 0.5rem;
+    overflow-x: scroll;
+  }
+}

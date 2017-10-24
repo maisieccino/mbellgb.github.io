@@ -11,4 +11,4 @@ Once students are introduced to JavaScript in general, Coffee School gets studen
 
 For the lessons the students will just need a web browser.
 
-<a class="button" href="http://ucl-coffeeschool.github.io/coffeeschool"><i class="fa fa-play"></i> Visit Site</a>
+<a class="button" href="http://ucl-coffeeschool.github.io/coffeeschool"><i data-feather="play"></i> Visit Site</a>

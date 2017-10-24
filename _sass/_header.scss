@@ -16,7 +16,12 @@ header:not(.header-home) {
   align-items: flex-start;
   justify-content: center;
   z-index: 0;
+  background-position: center center;
+  background-size: cover;
+  padding: 0.5rem 4%;
+  margin-bottom: 2rem;
 
+  &::before,
   &::after {
     position: absolute;
     display: block;
@@ -25,9 +30,20 @@ header:not(.header-home) {
     top: 0;
     bottom: 0;
     content: "";
+  }
+
+  // blurry header image
+  &::before {
+    background: inherit;
+    z-index: -2;
+    filter: blur(10px);
+  }
+
+  // gradient tint in bg
+  &::after {
     background: $gradient-bluepink;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.7;
   }
 
   @include respond-to(600px) {
@@ -37,11 +53,20 @@ header:not(.header-home) {
   h1,
   h2,
   h3 {
+    $highlight-pad: 0.2rem;
     background-color: $color-mint;
-    margin: 0.5rem 0;
-    padding: 0.25rem;
+    padding: $highlight-pad;
     display: inline;
-    box-shadow: 1vh 0 0 $color-mint, -1vh 0 0 $color-mint;
+    box-shadow: $highlight-pad 0 0 $color-mint,
+      -#{$highlight-pad} 0 0 $color-mint;
+  }
+
+  button,
+  .button {
+    border: 0.2rem solid $color-mint;
+    color: $color-mint;
+    background: $color-black;
+    font-size: 1.2rem;
   }
 
   div {
@@ -97,6 +122,7 @@ header.header-home {
     }
   }
 
+  // cool 3d-lines button
   button {
     font-size: 2rem;
     width: 12rem;
@@ -107,6 +133,7 @@ header.header-home {
     z-index: 0;
     position: relative;
     cursor: pointer;
+    display: block;
     background: transparent;
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
     padding: 0.5rem;
