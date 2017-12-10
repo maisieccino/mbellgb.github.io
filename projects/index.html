@@ -8,7 +8,8 @@ order: 3
 ---
 
 <div class="cards-3 large no-padding">
-    {% for p in site.projects %}
+    {% assign projects = site.projects | sort: "title" %}
+    {% for p in projects %}
         {% include card.html p=p %}
     {% endfor %}
 </div>

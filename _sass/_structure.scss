@@ -34,13 +34,16 @@ article {
   flex: 1;
 
   img:not(.emoji) {
-    border: 0.25rem solid $color-blue;
     margin: 1rem auto;
     max-height: 25rem;
     width: auto;
     max-width: 100%;
     box-sizing: border-box;
     display: block;
+    box-shadow: 0 0 10px 0px $color-blue;
+    position: relative;
+    padding: 0.25rem;
+    background: $gradient-bluepink;
   }
 
   &.page {

@@ -9,6 +9,6 @@ layout: page
   {% else %}
     {% assign alt = "Image showing the " | append: page.title | append: " project" %}
   {% endif %}
-  <img src="{{ page.img }}" alt="{{ alt }}" />
+  <img class="img-lead" src="{{ page.img }}" alt="{{ alt }}" />
 {% endif %}
 {{ content }}
