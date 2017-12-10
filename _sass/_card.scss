@@ -100,7 +100,21 @@ $card-padding: 0.5rem;
 }
 
 .card.post {
-  background-color: darken($color-white, 10);
+  background-color: darken($color-white, 5);
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem -1rem;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    background-color: darken($color-white, 10);
+    box-shadow: 0 3px 3px 0px rgba($color-pink, 0.5);
+  }
+
+  h3 {
+    margin: 0.25rem 0;
+    font-size: 1.3rem;
+  }
+  p {
+    margin: 0.25rem 0;
+  }
 }

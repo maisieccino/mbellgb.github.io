@@ -19,7 +19,15 @@ header:not(.header-home) {
   background-position: center center;
   background-size: cover;
   padding: 0.5rem 4%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+
+  &:not(.has-img) {
+    background: $gradient-pinkblue;
+    &::before,
+    &::after {
+      visibility: hidden;
+    }
+  }
 
   &::before,
   &::after {
@@ -36,12 +44,13 @@ header:not(.header-home) {
   &::before {
     background: inherit;
     z-index: -2;
-    filter: blur(10px);
+    filter: brightness(60%) blur(10px);
+    transform: scale(1.2);
   }
 
   // gradient tint in bg
   &::after {
-    background: $gradient-bluepink;
+    background: $gradient-pinkblue;
     z-index: -1;
     opacity: 0.7;
   }
@@ -53,20 +62,22 @@ header:not(.header-home) {
   h1,
   h2,
   h3 {
-    $highlight-pad: 0.2rem;
-    background-color: $color-mint;
-    padding: $highlight-pad;
     display: inline;
-    box-shadow: $highlight-pad 0 0 $color-mint,
-      -#{$highlight-pad} 0 0 $color-mint;
+    color: $color-white;
   }
 
   button,
   .button {
     border: 0.2rem solid $color-mint;
-    color: $color-mint;
-    background: $color-black;
+    color: $color-white;
+    background: $color-blue;
     font-size: 1.2rem;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      background: $color-mint;
+      color: $color-black;
+    }
   }
 
   div {

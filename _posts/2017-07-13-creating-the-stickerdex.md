@@ -4,7 +4,7 @@ title:  "Creating the Stickerdex"
 date:   2017-07-14 00:12:00 +0100
 category: website
 tags: tech website jekyll
-subtitle: "Turning a kinda lame idea into a kinda cool webpage."
+subtitle: "Turning a kinda rubbish idea into a kinda cool webpage."
 img: "/assets/img/stickers/inspiron/inspiron.jpg"
 ---
 
@@ -22,16 +22,22 @@ a bunch of different views:
 
 ![A screenshot of the stickerdex](/assets/img/creating-the-stickerdex/stickerdex.png)
 
-From here, you can click on the stickers shown to find out more information about that sticker's origins:
+From here, you can click on the stickers shown to find out more information
+about that sticker's origins:
 
 ![A screenshot of the stickerdex detail page](/assets/img/creating-the-stickerdex/detail.png)
 
-It was something that I haven't seen done before, and I also kinda thought it was a fun project to get stuck into. I hope you all enjoy looking through it, and the stickerdex is _far_ from complete! Read on to learn about the build process.
+It was something that I haven't seen done before, and I also kinda thought it
+was a fun project to get stuck into. I hope you all enjoy looking through it,
+and the stickerdex is _far_ from complete! Read on to learn about the build
+process.
 
 <hr />
 
 # The Build
-I already had a rough idea of how the stickerdex would work, and that I would essentially need three things:
+
+I already had a rough idea of how the stickerdex would work, and that I would
+essentially need three things:
 
 * An image of my laptop with the stickers on it,
 * Some kind of map showing the position of the stickers on the laptop,
@@ -47,10 +53,10 @@ image map (the `<map>` tag) to define the hotspots over my image, but there were
 a few problems with this approach:
 
 * `<map>` appears below the `<image>` tag, which makes aligning it over the
-image and displaying a hover effect very difficult,
+  image and displaying a hover effect very difficult,
 * `<map>` is not responsive, I would have to add a jQuery plugin to resize
-it---this is very costly to the user in terms of page loading time and
-page speed responsiveness.
+  it---this is very costly to the user in terms of page loading time and page
+  speed responsiveness.
 
 The solution I ended up going for was to create an SVG image with each sticker
 defined as a `<path>` or an `<ellipse>` element. Then, I would copy these
@@ -62,25 +68,30 @@ for now I'm using jQuery for ease of use still). My workflow kinda looks like
 this:
 
 * Open Inkscape (a free and open source vector graphics editor). Inkscape is one
-of the nicest and well developed free graphcis programs, and easily holds its
-own against big industry competitors like Adobe Illustrator.
+  of the nicest and well developed free graphcis programs, and easily holds its
+  own against big industry competitors like Adobe Illustrator.
 * Import the laptop photo as a layer, resize canvas to match, and lock this
-layer. I can now trace over the stickers in the image. Make sure that you choose
-to import as a "link" rather than an "embed", since this will save on file
-space.
+  layer. I can now trace over the stickers in the image. Make sure that you
+  choose to import as a "link" rather than an "embed", since this will save on
+  file space.
 * Start drawing shapes/ellipses over the image, using a fill to keep track of
-what stickers have been captured. It's also important to remember to set the
-`id` attribute of the image in the object properties sidebar; this is so that
-we can reference it later.
+  what stickers have been captured. It's also important to remember to set the
+  `id` attribute of the image in the object properties sidebar; this is so that
+  we can reference it later.
 * Once done, save the SVG file in a sensible place. Now we can get on to the
-coding bit.
+  coding bit.
 
 ![A screenshot of overlays being added to the stickers in Inkscape.](/assets/img/creating-the-stickerdex/inkscape.png)
 
 ## Jekyll Templating FTW
-The best bit about using Jekyll is how versatile its templating engine is. For this scenario, I'm using a collection called `stickers` which contains a bunch of SVG fragments; these will then get generated into full HTML pages.
 
-I first create the directory for the collection, `_stickers`. My preference is to group each devices' views inside their own directories, meaning that my directory structure looks like this:
+The best bit about using Jekyll is how versatile its templating engine is. For
+this scenario, I'm using a collection called `stickers` which contains a bunch
+of SVG fragments; these will then get generated into full HTML pages.
+
+I first create the directory for the collection, `_stickers`. My preference is
+to group each devices' views inside their own directories, meaning that my
+directory structure looks like this:
 
 ```
 _stickers
@@ -116,7 +127,6 @@ To get to this stage was relatively straightforward. I copied all of the
 and dumped them into the file. The `name` and `view` keys in the front matter
 are just there to make the page have nicely formatted titles.
 
-
 Oh yeah, quick tip. Jekyll will render anything, whatever the file extension,
 with its own formatting style (i.e. `{%raw%}{{ tags }}{%endraw%}`) as long as
 you include a front matter. Even if it's empty! Think about that when generating
@@ -145,18 +155,19 @@ sake, I'm calling it `stickers.json`:
           "width": 1422.4,
           "height": 1066.8,
           "viewbox": {
-            "width": 1422.40,
-            "height": 1066.80
+            "width": 1422.4,
+            "height": 1066.8
           },
           "stickers": [
             {
               "name": "Is This Real Life?",
               "id": "isThisRealLife",
               "date": "2015-11-07",
-              "description": "Obtained via sticker pack from a Capture The Flag (CTF) security event at Facebook's London offices.",
+              "description":
+                "Obtained via sticker pack from a Capture The Flag (CTF) security event at Facebook's London offices.",
               "img": "/assets/img/stickers/inspiron/is-this-real-life.png"
             },
-            { }
+            {}
           ]
         }
       ]
@@ -172,17 +183,18 @@ The `views` key is an array of the views of this device---for instance, `front`
 and `back`.
 
 For each `view`, it contains the following:
+
 * `name`: the name of the view. make sure this is consistent with the HTML file
-you made earlier so that they can link up easily.
+  you made earlier so that they can link up easily.
 * `src`: the path to the source of the background photo. Since we're not using
-the SVG used to trace our stickers, we need to drop the image in ourselves.
+  the SVG used to trace our stickers, we need to drop the image in ourselves.
 * `width` and `height`: width and height of the SVG file. They're is normally
-the same as the `viewbox` values, but it's nice to have just in case they're
-not.
-* `viewbox`: the width and height of the SVG viewbox. Think of this as a
-resized "window" looking into your SVG file. This is the size of the canvas
-that your shapes get their coordinates from. You can find this in the
-Inkscape document settings.
+  the same as the `viewbox` values, but it's nice to have just in case they're
+  not.
+* `viewbox`: the width and height of the SVG viewbox. Think of this as a resized
+  "window" looking into your SVG file. This is the size of the canvas that your
+  shapes get their coordinates from. You can find this in the Inkscape document
+  settings.
 * `stickers` - an array of this view's stickers.
 
 Each sticker should, at the bare minimum, have a `name` and `id`. The `id`
@@ -267,10 +279,9 @@ The next thing to do is to create our SVG in the page. Notice how I'm
 substituting out various tag attributes (e.g. `viewBox`) for the variables
 defined in our JSON file? The `<image>` tag is how images are defined in SVG
 files. The image will _always_ scale to match the overlays, which is a nice side
-effect of using SVGs over the `<map>` tag. Finally, we drop in the
-`{%raw%}{{ content }}{%endraw%}` tag, which renders all the SVG elements we
-copied over earlier. Congrats, we now have an SVG statically rendered for each
-sticker view!
+effect of using SVGs over the `<map>` tag. Finally, we drop in the `{%raw%}{{
+content }}{%endraw%}` tag, which renders all the SVG elements we copied over
+earlier. Congrats, we now have an SVG statically rendered for each sticker view!
 
 That final script tag is something I'm using to define a `stickers` object in
 the page, which will be called upon in my code when clicking on each overlay. I
@@ -279,7 +290,7 @@ inside that `<script>` element. Later on, I have a jQuery event handler which
 looks a bit like this:
 
 ```javascript
-$(".stickerView path, .stickerView ellipse").click(function () {
+$(".stickerView path, .stickerView ellipse").click(function() {
   // can't use arrow functions here. we need the `this` variable.
   const id = $(this).attr("id");
   // using the stickers variable from earlier...
@@ -289,14 +300,15 @@ $(".stickerView path, .stickerView ellipse").click(function () {
   // etc...
 });
 ```
+
 I also use this event handler to pop all the information into a modal box and
 render it on top of the page content, but that's a topic that's a little out of
 scope for this article. Other tricky things included trying to restore stickers
 that literally don't exist anymore, but a little image editing magic should sort
 this out easily enough.
 
-All of the code for this is available on my [website's
-repository](//github.com/mbellgb/mbellgb.github.io). Hopefully this has been
-useful. Please make an issue on the repository (or contact me) if you have any
-questions, and make a pull request if you have a suggestion. Thanks for stopping
-by!
+All of the code for this is available on my
+[website's repository](//github.com/mbellgb/mbellgb.github.io). Hopefully this
+has been useful. Please make an issue on the repository (or contact me) if you
+have any questions, and make a pull request if you have a suggestion. Thanks for
+stopping by!

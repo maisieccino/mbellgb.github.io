@@ -10,16 +10,18 @@ article.post {
     text-align: left;
   }
 
+  p,
+  li {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+  }
+
   hr {
     margin: 2rem 0;
   }
 
-  img {
-    border: 0.25rem solid $color-blue;
-  }
-
   code {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   pre > code {

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<header {% if page.img %} style="background-image: url('{{ page.img | prepend: site.baseurl }}')" {% endif %}>
+<header {% if page.img %} class="has-img" style="background-image: url('{{ page.img | prepend: site.baseurl }}')" {% endif %}>
     {% if page.title %}
         <div><h1>{{ page.title }}</h1></div>
     {% endif %}
@@ -18,5 +18,15 @@ layout: default
     {% if page.subtitle %}
         <h3>{{ page.subtitle }}</h3>
     {% endif %}
+
+    {% if page.img %}
+        {% if page.imgalt %}
+            {% assign alt = page.imgalt %}
+        {% else %}
+            {% assign alt = "Image showing the " | append: page.title | append: " project" %}
+        {% endif %}
+        <img src="{{ page.img }}" alt="{{ alt }}" />
+    {% endif %}
+
     {{ content }}
 </article>

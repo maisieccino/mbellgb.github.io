@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<header {% if page.img %} style="background-image: url('{{ page.img | prepend: site.baseurl }}')" {% endif %}>
+<header {% if page.img %} class="has-img" style="background-image: url('{{ page.img | prepend: site.baseurl }}')" {% endif %}>
     {% if page.title %}
         <div><h1>{{ page.title }}</h1></div>
     {% endif %}

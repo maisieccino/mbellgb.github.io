@@ -62,6 +62,10 @@ section.home {
     color: $color-blue;
   }
 
+  p {
+    margin: 1rem 0;
+  }
+
   aside {
     display: flex;
     flex-direction: column;

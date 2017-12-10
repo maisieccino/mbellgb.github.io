@@ -3,4 +3,12 @@ layout: page
 ---
 
 <p><a class="button" href="/projects"><i data-feather="arrow-left"></i> Back</a></p>
+{% if page.img %}
+  {% if page.imgalt %}
+    {% assign alt = page.imgalt %}
+  {% else %}
+    {% assign alt = "Image showing the " | append: page.title | append: " project" %}
+  {% endif %}
+  <img src="{{ page.img }}" alt="{{ alt }}" />
+{% endif %}
 {{ content }}
