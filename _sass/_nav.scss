@@ -13,6 +13,17 @@
   min-width: 0;
   transition: all $animation-default;
 
+  &::before {
+    border-radius: 50%;
+  }
+
+  &:focus {
+    width: 4.25rem;
+    height: 4.25rem;
+    bottom: 1.88rem;
+    right: 1.88rem;
+  }
+
   .bar {
     width: 50%;
     height: 6%;

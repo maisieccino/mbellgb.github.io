@@ -4,6 +4,7 @@ project_url: https://github.com/ucl-coffeeschool/coffeeschool
 description: Learn how to use JavaScript and create games!
 img: /assets/img/coffeeschool.jpg
 imgalt: "A screenshot of the Coffee School website, "
+date: "2016-03-25 12:00+00:00"
 ---
 
 Coffee School is a project to provide an introduction to JavaScript and give

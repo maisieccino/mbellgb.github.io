@@ -4,6 +4,7 @@ project_url: https://devpost.com/software/chromelexa
 description: Control your browser with your Alexa device.
 img: /assets/img/chromelexa.jpg
 imgalt: "A photo of an Amazon Echo, behind a laptop displaying the Chromelexa plugin"
+date: "2017-03-04 12:00+00:00"
 ---
 
 Chromelexa is an Amazon Alexa skill and a Google Chrome extension which pair

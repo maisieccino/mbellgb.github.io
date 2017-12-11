@@ -4,6 +4,7 @@ project_url: https://devpost.com/software/brewtube
 description: Journey updates from the comfort of your coffee cup.
 img: /assets/img/brewtube.jpg
 imgalt: "A photo of the Paulig Muki mug, displaying the current service update for the Metropolitan Line"
+date: "2017-03-12 12:00+00:00"
 ---
 
 BrewTube is an app that uses the Paulig Muki smart coffee mug to fetch real-time

@@ -124,6 +124,20 @@ if (headerHomeButton) {
     //});
   });
 }
+const aboutNextButton = document.querySelector("#about-next-button");
+if (aboutNextButton) {
+  aboutNextButton.addEventListener("click", () => {
+    const projectsSection = document.querySelector("#section-projects");
+    scrollIt(projectsSection.offsetTop, 800, "easeInOutQuad", () => {});
+  });
+}
+const projectsNextButton = document.querySelector("#projects-next-button");
+if (projectsNextButton) {
+  projectsNextButton.addEventListener("click", () => {
+    const hackathonsSection = document.querySelector("#section-hackathons");
+    scrollIt(hackathonsSection.offsetTop, 800, "easeInOutQuad", () => {});
+  });
+}
 
 const menuActiveClass = "menu-active";
 const navButton = document.querySelector("#nav-button");

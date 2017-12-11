@@ -4,6 +4,7 @@ project_url: https://techsoc.io
 description: 2016 refresh of the UCLU TechSoc logo + design
 img: /assets/img/techsoc.png
 imgalt: "The current TechSoc logo"
+date: "2016-11-01 12:00+00:00"
 ---
 
 During Summer 2016, one of my tasks as the [UCLU TechSoc](https://techsoc.io)

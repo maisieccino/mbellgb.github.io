@@ -4,6 +4,7 @@ project_url: http://students.cs.ucl.ac.uk/2016/group19/
 description: Server and app to connect company mentors with mentees.
 img: /assets/img/mentormatch.png
 imgalt: "Three screenshots showing the mentor matching app. Left: The home screen showing available programs. Middle: A page showing information about a certain program. Right: The signup page for the program"
+date: "2017-04-26 12:00+00:00"
 ---
 
 Atos Mentor Match is my second year university project, which I worked on

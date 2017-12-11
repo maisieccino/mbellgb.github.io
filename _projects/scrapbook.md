@@ -4,6 +4,7 @@ project_url: https://devpost.com/software/scrapbook
 description: Free your bookmarks.
 img: /assets/img/scrapbook.jpg
 imgalt: "First version of the Scrapbook desktop client, built at Lauzhack."
+date: "2017-11-12 12:00+00:00"
 ---
 
 Scrapbook is an offline bookmark store. Think of it like your browser's

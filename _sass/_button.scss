@@ -3,24 +3,48 @@ button,
   font-family: $font-body;
   background: $gradient-bluepink;
   color: $color-white;
-  border: none;
-  padding: 0.55rem 0.5rem 0.25rem;
   min-width: 5rem;
   text-decoration: none;
   padding: 1.2rem 1rem 1rem;
   display: inline-flex;
   align-items: center;
+  position: relative;
+  z-index: 0;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  transition: all 0.25s ease-in-out;
+  border: 0rem dashed transparent;
 
   svg.feather {
     margin-right: 0.25rem;
     margin-top: -0.3rem;
+  }
+
+  @include before-block() {
+    background: inherit;
+    z-index: -1;
+    filter: blur(8px);
+    transform: scale(0.7);
+    transition: transform 0.25s ease-in-out;
+  }
+
+  &:hover::before {
+    transform: scale(1);
+  }
+
+  &:focus {
+    outline: none;
+    text-decoration: underline;
+    border-width: 0.2rem;
+    padding: 1rem 0.8rem 0.8rem;
+    border-color: $color-mint;
   }
 }
 
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  margin: 1.5rem 9;
+  margin: 1.5rem 0;
 
   & > * {
     margin: 0.25rem;

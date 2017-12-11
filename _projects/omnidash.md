@@ -4,6 +4,7 @@ project_url: https://github.com/hatch-ucl/hatch-site
 description: Online event dashboard initially built as a bespoke project for a hackathon.
 img: /assets/img/omnidash.png
 imgalt: "Omnidash screenshot, showing the event detail page with event info and a list of the upcoming schedule"
+date: "2017-12-10 12:00+00:00"
 ---
 
 # About

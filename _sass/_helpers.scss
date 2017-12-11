@@ -21,3 +21,17 @@
     @content;
   }
 }
+
+// adds the regular stuff to add an element's ::before block
+@mixin before-block() {
+  &::before {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: block;
+    content: "";
+    @content;
+  }
+}

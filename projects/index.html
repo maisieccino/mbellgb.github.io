@@ -8,7 +8,7 @@ order: 3
 ---
 
 <div class="cards-3 large no-padding">
-    {% assign projects = site.projects | sort: "title" %}
+    {% assign projects = site.projects | sort: "date", "first" | reverse %}
     {% for p in projects %}
         {% include card.html p=p %}
     {% endfor %}

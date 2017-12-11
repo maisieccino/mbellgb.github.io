@@ -4,6 +4,7 @@ project_url: https://devpost.com/software/git-plus-leap
 description: Putting the power of Git in your hands!
 img: /assets/img/gitpp.jpg
 imgalt: "A laptop displaying the Atom text editor and a graphic showing hand movement. In front, a hand making a grabbing gesture"
+date: "2016-02-28 12:00+00:00"
 ---
 
 Git++ is a plugin for the Atom text editor that allows the user to manage their
