@@ -1,2 +1,4 @@
 livereload: true
 baseurl: ""
+show_drafts: true
+future: true

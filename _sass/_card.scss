@@ -133,17 +133,47 @@ $card-padding: 0.5rem;
   padding: 1rem;
   margin: 0.5rem -1rem;
   transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+
+  .card-img {
+    align-self: stretch;
+    flex: 0 0 8rem;
+    margin: -1rem -1rem 0.5rem -1rem;
+  }
 
   &:hover {
     background-color: darken($color-white, 10);
     box-shadow: 0 3px 3px 0px rgba($color-pink, 0.5);
   }
 
-  h3 {
-    margin: 0.25rem 0;
-    font-size: 1.3rem;
+  .card-body {
+    flex: 4;
+    padding: 0;
+    a {
+      color: $color-blue;
+    }
+    h3 {
+      margin: 0.25rem 0;
+      font-size: 1.3rem;
+    }
+    p {
+      margin: 0.25rem 0;
+    }
   }
-  p {
-    margin: 0.25rem 0;
+
+  @include respond-to(600px) {
+    .card-body {
+      flex: 5;
+    }
+  }
+
+  @include respond-to(500px) {
+    flex-direction: row;
+
+    .card-img {
+      flex: 1;
+      margin: -1rem 1rem -1rem -1rem;
+    }
   }
 }

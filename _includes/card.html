@@ -4,5 +4,7 @@
     <h3>{{ p.title }}</h3>
     <p>{{ p.description }}</p>
   </div>
-  <div><a href="{{ p.url | prepend: site.baseurl }}" class="button">Learn More</a></div>
+  {% if p.url %}
+    <div><a href="{{ p.url | prepend: site.baseurl }}" class="button">Learn More</a></div>
+  {% endif %}
 </div>

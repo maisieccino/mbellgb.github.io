@@ -32,7 +32,7 @@ article {
     &::before {
       position: absolute;
       right: calc(100% + 1rem);
-      color: lighten($color-black, 20);
+      color: lighten($color-black, 30);
     }
   }
 

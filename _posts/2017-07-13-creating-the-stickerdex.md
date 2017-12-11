@@ -279,8 +279,7 @@ The next thing to do is to create our SVG in the page. Notice how I'm
 substituting out various tag attributes (e.g. `viewBox`) for the variables
 defined in our JSON file? The `<image>` tag is how images are defined in SVG
 files. The image will _always_ scale to match the overlays, which is a nice side
-effect of using SVGs over the `<map>` tag. Finally, we drop in the `{%raw%}{{
-content }}{%endraw%}` tag, which renders all the SVG elements we copied over
+effect of using SVGs over the `<map>` tag. Finally, we drop in the `{%raw%}{{ content }}{%endraw%}` tag, which renders all the SVG elements we copied over
 earlier. Congrats, we now have an SVG statically rendered for each sticker view!
 
 That final script tag is something I'm using to define a `stickers` object in
