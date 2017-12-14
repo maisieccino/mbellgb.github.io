@@ -2,7 +2,6 @@ article.post {
   @extend .page;
 
   font-family: $font-writing;
-  text-align: justify;
   font-size: 1.2rem;
   line-height: 1.8rem;
 
@@ -14,6 +13,11 @@ article.post {
   li {
     font-size: 1.1rem;
     margin: 1rem 0;
+  }
+
+  p,
+  h3 {
+    text-align: justify;
   }
 
   hr {
