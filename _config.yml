@@ -24,7 +24,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 show_drafts: false
-future: false
+future: true
 
 paginate: 5
 paginate_path: "/blog/page/:num/"
