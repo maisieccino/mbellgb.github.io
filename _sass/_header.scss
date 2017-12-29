@@ -56,7 +56,7 @@ header:not(.header-home) {
   }
 
   @include respond-to(600px) {
-    padding: 0 15%;
+    padding: 0 20%;
   }
 
   h1,
