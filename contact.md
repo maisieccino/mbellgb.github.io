@@ -9,13 +9,13 @@ order: 5
 
 # Social Media
 
-Twitter <i data-feather="twitter" aria-hidden="true"></i> <a href="https://twitter.com/mbell_gb">mbell_gb</a>
+Twitter <i data-feather="twitter" aria-hidden="true"></i> <a href="https://twitter.com/mbellgb">mbellgb</a>
 
 Facebook <i data-feather="facebook" aria-hidden="true"></i> <a href="https://facebook.com/mbellgb">mbellgb</a>
 
 GitHub <i data-feather="github" aria-hidden="true"></i> <a href="https://github.com/mbellgb">mbellgb</a>
 
-Instagram <i data-feather="instagram" aria-hidden="true"></i> <a href="https://instagram.com/mbell_gb">mbell_gb</a>
+Instagram <i data-feather="instagram" aria-hidden="true"></i> <a href="https://instagram.com/mbellgb">mbellgb</a>
 
 LinkedIn <i data-feather="briefcase" aria-hidden="true"></i> <a href="https://linkedin.com/mbellcs">mbellcs</a>
 
