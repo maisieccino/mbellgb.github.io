@@ -18,4 +18,5 @@ gem "github-pages"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-livereload"
+   gem "jekyll-compose"
 end
