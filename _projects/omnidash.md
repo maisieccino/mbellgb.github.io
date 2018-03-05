@@ -1,6 +1,6 @@
 ---
 title: Omnidash
-project_url: https://github.com/hatch-ucl/hatch-site
+project_url: https://github.com/mbellgb/hatch-site
 description: Online event dashboard initially built as a bespoke project for a hackathon.
 img: /assets/img/omnidash.png
 imgalt: "Omnidash screenshot, showing the event detail page with event info and a list of the upcoming schedule"

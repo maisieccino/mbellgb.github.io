@@ -38,4 +38,4 @@ members beforehand, so I also benefitted from making three new friends!
 The demo site is no longer active, but you can check out our source code on our
 [GitHub repository](https://github.com/jpbreuer/junction2016), or you can read
 about my experiences at Junction on my
-[Medium profile](https://medium.com/@mbell_gb/my-weekend-at-junction-2016-23fee7e211e8#.zgvhiydk0).
+[Medium profile](https://medium.com/@mbellgb/my-weekend-at-junction-2016-23fee7e211e8#.zgvhiydk0).

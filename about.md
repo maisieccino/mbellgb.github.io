@@ -14,7 +14,7 @@ London. I'm currently on track to obtain a 2:1 degree by July 2018.
 
 I wrote some thoughts on my first year of computer science, which you can read
 on my
-[Medium blog](https://medium.com/@mbell_gb/computer-science-pitfalls-be95017ad1bf#.60rykzv0e).
+[Medium blog](https://medium.com/@mbellgb/computer-science-pitfalls-be95017ad1bf#.60rykzv0e).
 
 ## UCLU TechSoc
 
@@ -26,6 +26,13 @@ organisation for [Porticode](http://porticode.io), TechSoc's own hackathon.
 
 You can find out about my work history and experience on
 [LinkedIn](https://www.linkedin.com/in/mbellcs/).
+
+## Freelance Software Engineer at Bell Software Development
+
+_June to October 2017_
+
+I worked at a couple of startups during summer 2017, mainly on React and
+React Native projects.
 
 ## Internet Services Developer (Intern) at [Netcraft](https://netcraft.com/)
 
