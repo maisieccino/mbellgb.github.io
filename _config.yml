@@ -48,7 +48,7 @@ collections:
 # Build settings
 markdown: kramdown
 kramdown:
-  input:          GFM
+  input: GFM
   # https://github.com/jekyll/jekyll/pull/4090
   syntax_highlighter: rouge
 
