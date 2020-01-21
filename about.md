@@ -12,9 +12,14 @@ order: 2
 You can find out about my work history and experience on
 [LinkedIn](https://www.linkedin.com/in/mbellcs/).
 
+## Full Stack Developer at [Limejump](https://limejump.com)
+
+_June 2019 to present_
+
+
 ## Microservices Engineer at [State Street](https://statestreet.com)
 
-_July 2018 to present_
+_July 2018 to June 2019_
 
 ## Freelance Software Engineer at Bell Software Development
 
