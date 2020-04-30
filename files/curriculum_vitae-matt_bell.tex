@@ -61,8 +61,8 @@
 % \ \ \faicon{twitter} @mbell\_gb\ \ \textbullet\
 % \\
 % +44 7827 638207\ \ \textbullet\
-\ \ matt@mbell.me\ \ \textbullet\
-\ \ https://mbell.me/ \textbullet\
+\ \ matt@mbell.dev \textbullet\
+\ \ https://mbell.dev/ \textbullet\
 \ \ Twitter: @mbellgb
 \end{center}
 
@@ -84,10 +84,12 @@
  		{\emph{Full Stack Developer}}
  		{\emph{Jun 2019 --- present}}
  	\begin{itemize*}
-	    \item Working on various codebases across the stack, as part of the trading and operations team
-	    \item Leading and mentoring the team on migrating from ECS + Salt stack to Kubernetes
-	    \item Working a number of incident on-call rotas, getting exposure to the entire company's tech systems and fixing a wide array of issues.
+	    \item Working on 10+ projects across the company, as part of the trading and operations team.
+	    \item Leading and mentoring the team on migrating from ECS + Salt stack to Kubernetes, including running interactive workshops and demos.
+	    \item Working multiple incident on-call rotas, getting exposure to the entire company's tech systems and fixing a wide array of issues.
 	    \item Maintaining Django and AngularJS projects, as well as building features for new Golang \& Flask microservices.
+	    \item Introduced new dev tools to the org: Kiali for monitoring service traffic and Jaeger for tracing requests from start to finish.
+	    \item Added stronger integration testing for the trading platform by creating Kubernetes clusters and testing on them as part of the deployment pipeline.
  	\end{itemize*}
 
  	\item
@@ -177,15 +179,17 @@
 \hyphenpenalty=1000
 \begin{description*}
 	\item[Languages:]
-    Working experience: Go, Python, Javascript, HCL, YAML\\
-    Intermediate: C\\
-    Limited experience: Java
+	    Working experience: Go, Python, Javascript \& Typescript, YAML\\
+	    Intermediate: C
 	\item[Web Technologies:]
 	    Experience with popular web technologies such as Node.JS, React, and Django. Maintained Angular and Flask codebases.
-	\item[Server-side engineering:]
-	Experience using database systems (PostgreSQL), web server software (Nginx, Apache, Istio), UNIX shells and continuous integration systems (Concourse, Jenkins, CircleCI, GitHub Actions). Limited knowledge of Kafka.
-        \item[DevOps:] Experience building, running and maintaining Kubernetes services, Ansible, Terraform, AWS-based systems, Prometheus.
-	% I maintain my own virtual web server and have had experience setting up and running servers. I also have experience with web server software (Nginx \& Apache), database systems (PostgreSQL /MariaDB /MongoDB) and I am proficient with using UNIX shells.
+	\item[Data and networking:]
+	    Experience using database systems (PostgreSQL), web server software (Nginx, Apache, Istio), UNIX shells and continuous integration systems (Concourse, Jenkins, CircleCI, GitHub Actions). Limited knowledge of Kafka.
+	\item[DevOps:]
+	    Experience building, running and maintaining Kubernetes
+    	    services and cloud services, using provisioning tools like Ansible,
+    	    Terraform and Salt, and using monitoring tools like Prometheus, Grafana
+    	    and distributed tracing systems.
 \end{description*}
 \end{indentsection}
 
@@ -219,7 +223,12 @@
 \vspace{-1.2em}
 \subsection*{Projects}
 \begin{indentsection}{\parindent}
-	A selection of projects (plus source code) is available at https://mbell.me/projects.
+	More projects (plus source code) is available at https://mbell.me/projects.
+	\begin{description*}
+		\item[Healthcheck-Controller:] A Kubernetes controller to monitor service health (rather than pod health).
+		\item[Haul:] A service for storing notes, thoughts, and other free-form information. Built with Ruby on Rails.
+		\item[UCL Assistant:] An app to improve student life at university, using the UCL API to fetch timetables and study space availability.
+	\end{description*}
 \end{indentsection}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.1.23)  23 JAN 2020 09:02
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.1.23)  30 APR 2020 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -582,7 +582,13 @@ LaTeX Font Warning: Font shape `TU/Apercu(0)/m/it' undefined
 
 [1
 
-] [2] (./curriculum_vitae-matt_bell.aux)
+]
+Overfull \hbox (6.86972pt too wide) in paragraph at lines 187--188
+[]\TU/Apercu(0)/m/it/10.95 Experience using database systems (PostgreSQL), web 
+server software (Nginx, Apache,
+ []
+
+[2] (./curriculum_vitae-matt_bell.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
